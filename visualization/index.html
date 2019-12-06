@@ -13091,7 +13091,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">chart_studio.plotly</span> <span class="k">as</span> <span class="nn">py</span>
@@ -13117,10 +13117,29 @@ div#notebook {
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>/Users/hopetambala/Documents/development/school/LobbyView/venv/lib/python3.7/site-packages/urllib3/connectionpool.py:1004: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecureRequestWarning,
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;data_file.json&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
@@ -13141,11 +13160,11 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">result</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;result&#39;</span><span class="p">]:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<span class="c1">#     print(result)</span>
     <span class="k">if</span> <span class="s1">&#39;specific_issues&#39;</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">keys</span><span class="p">()):</span>
         <span class="k">for</span> <span class="n">issue</span> <span class="ow">in</span> <span class="n">result</span><span class="p">[</span><span class="s1">&#39;specific_issues&#39;</span><span class="p">]:</span>
             <span class="k">if</span> <span class="s1">&#39;bills_by_algo&#39;</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">issue</span><span class="o">.</span><span class="n">keys</span><span class="p">()):</span>
@@ -13179,10 +13198,37 @@ div#notebook {
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">KeyError</span>                                  Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-13-34dabab540be&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">     17</span>                     spons<span class="ansi-blue-fg">.</span>append<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">[</span>name<span class="ansi-blue-fg">,</span> party<span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     18</span> 
+<span class="ansi-green-fg">---&gt; 19</span><span class="ansi-red-fg">                     </span><span class="ansi-green-fg">for</span> lobbyist <span class="ansi-green-fg">in</span> issue<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;lobbyists&#39;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">     20</span>                         lobbyists<span class="ansi-blue-fg">.</span>append<span class="ansi-blue-fg">(</span>lobbyist<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     21</span> 
+
+<span class="ansi-red-fg">KeyError</span>: &#39;lobbyists&#39;</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">json_normalize</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;result&#39;</span><span class="p">])</span>
@@ -13195,7 +13241,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
@@ -13204,6 +13250,146 @@ div#notebook {
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Index([&#39;issue_codes&#39;, &#39;received&#39;, &#39;has_amendments&#39;, &#39;client_name&#39;, &#39;period&#39;,
+       &#39;registrant&#39;, &#39;amount&#39;, &#39;specific_issues&#39;, &#39;year&#39;,
+       &#39;is_latest_amendment&#39;, &#39;type&#39;, &#39;id&#39;, &#39;alternate_name&#39;,
+       &#39;client.legal_name&#39;, &#39;client.name&#39;, &#39;client.naics&#39;, &#39;client.gvkey&#39;,
+       &#39;client.ticker&#39;, &#39;client.id&#39;, &#39;client.bvdid&#39;, &#39;lobbyists&#39;, &#39;sponsors&#39;,
+       &#39;affiliated_orgs&#39;, &#39;foreign_entities&#39;],
+      dtype=&#39;object&#39;)
+&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 5000 entries, 0 to 4999
+Data columns (total 24 columns):
+issue_codes            5000 non-null object
+received               5000 non-null int64
+has_amendments         5000 non-null bool
+client_name            4725 non-null object
+period                 5000 non-null object
+registrant             5000 non-null object
+amount                 3533 non-null float64
+specific_issues        4692 non-null object
+year                   5000 non-null int64
+is_latest_amendment    5000 non-null bool
+type                   5000 non-null object
+id                     5000 non-null object
+alternate_name         5000 non-null object
+client.legal_name      4725 non-null object
+client.name            5000 non-null object
+client.naics           3278 non-null object
+client.gvkey           1172 non-null object
+client.ticker          3779 non-null object
+client.id              0 non-null object
+client.bvdid           4269 non-null object
+lobbyists              707 non-null object
+sponsors               707 non-null object
+affiliated_orgs        60 non-null object
+foreign_entities       56 non-null object
+dtypes: bool(2), float64(1), int64(2), object(19)
+memory usage: 869.3+ KB
+None
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[15]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>received</th>
+      <th>amount</th>
+      <th>year</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>5.000000e+03</td>
+      <td>3.533000e+03</td>
+      <td>5000.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>1.268565e+09</td>
+      <td>8.967131e+04</td>
+      <td>2009.433600</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>1.574466e+08</td>
+      <td>3.467687e+05</td>
+      <td>5.066629</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>9.183636e+08</td>
+      <td>0.000000e+00</td>
+      <td>1999.000000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>1.155269e+09</td>
+      <td>1.950000e+04</td>
+      <td>2006.000000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>1.278572e+09</td>
+      <td>3.000000e+04</td>
+      <td>2010.000000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>1.397690e+09</td>
+      <td>6.000000e+04</td>
+      <td>2014.000000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>1.526436e+09</td>
+      <td>1.090000e+07</td>
+      <td>2018.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -13217,7 +13403,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;issue_codes&#39;</span><span class="p">,</span><span class="s1">&#39;client_name&#39;</span><span class="p">,</span><span class="s1">&#39;period&#39;</span><span class="p">,</span><span class="s1">&#39;registrant&#39;</span><span class="p">,</span><span class="s1">&#39;amount&#39;</span><span class="p">,</span><span class="s1">&#39;specific_issues&#39;</span><span class="p">,</span><span class="s1">&#39;year&#39;</span><span class="p">,</span><span class="s1">&#39;type&#39;</span><span class="p">,</span><span class="s1">&#39;id&#39;</span><span class="p">,</span><span class="s1">&#39;alternate_name&#39;</span><span class="p">,</span> <span class="s1">&#39;client.legal_name&#39;</span><span class="p">,</span><span class="s1">&#39;client.name&#39;</span><span class="p">,</span><span class="s1">&#39;lobbyists&#39;</span><span class="p">,</span><span class="s1">&#39;sponsors&#39;</span><span class="p">]</span>
@@ -13230,13 +13416,260 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="n">columns</span><span class="p">]</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[17]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>issue_codes</th>
+      <th>client_name</th>
+      <th>period</th>
+      <th>registrant</th>
+      <th>amount</th>
+      <th>specific_issues</th>
+      <th>year</th>
+      <th>type</th>
+      <th>id</th>
+      <th>alternate_name</th>
+      <th>client.legal_name</th>
+      <th>client.name</th>
+      <th>lobbyists</th>
+      <th>sponsors</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>[BUD]</td>
+      <td>TRANSPORTATION DISTRICT COMMISSION OF HAMPTON ...</td>
+      <td>Mid-Year (Jan 1 - Jun 30)</td>
+      <td>HOLLAND &amp; KNIGHT LLP</td>
+      <td>20000.0</td>
+      <td>[{'text': '', 'gov_entities': ['Federal Transi...</td>
+      <td>2001</td>
+      <td>MID-YEAR REPORT</td>
+      <td>0CA354DE-D9EF-4D44-ADF3-7C50F22A9174</td>
+      <td>TRANSPORTATION DISTRICT COMMISSION OF HAMPTON ...</td>
+      <td>TRANSPORTATION DISTRICT COMMISSION OF HAMPTON ...</td>
+      <td>TRANSPORTATION DISTRICT COMMISSION OF HAMPTON ...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>[HCR]</td>
+      <td>NYU HOSPITALS CENTER</td>
+      <td>1st Quarter (Jan 1 - Mar 31)</td>
+      <td>NYU Hospitals Center</td>
+      <td>20000.0</td>
+      <td>[{'text': 'AHCA,Continued funding and insuranc...</td>
+      <td>2017</td>
+      <td>FIRST QUARTER REPORT</td>
+      <td>0CA35FEE-25F5-457B-BB35-51751AD9A20A</td>
+      <td>NYU HOSPITALS CENTER</td>
+      <td>NYU HOSPITALS CENTER</td>
+      <td>NYU HOSPITALS CENTER</td>
+      <td>[Ventresca-Ecroyd, Gilda]</td>
+      <td>[[Klobuchar, Amy, Democrat]]</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>[DEF]</td>
+      <td>TRUETECH INC</td>
+      <td>3rd Quarter (July 1 - Sep 30)</td>
+      <td>PR/STRATEGIES INTERNATIONAL LLC</td>
+      <td>5000.0</td>
+      <td>[{'text': 'military supply issues 
+', 'gov_ent...</td>
+      <td>2010</td>
+      <td>THIRD QUARTER REPORT</td>
+      <td>0CA37843-506D-4673-AD95-BED34BB66604</td>
+      <td>TRUETECH INC</td>
+      <td>TRUETECH INC</td>
+      <td>TRUETECH INC</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>[DEF]</td>
+      <td>ENVISION CORP</td>
+      <td>2nd Quarter (Apr 1 - June 30)</td>
+      <td>DPR Consulting, LLC</td>
+      <td>30000.0</td>
+      <td>[{'text': 'FY 2009 Defense Appropriations Bill...</td>
+      <td>2008</td>
+      <td>SECOND QUARTER REPORT</td>
+      <td>0CA382C8-1DF9-4F92-8C35-408B5E77934A</td>
+      <td>ENVISION CORPORATION</td>
+      <td>ENVISION CORP</td>
+      <td>ENVISION CORPORATION</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>[]</td>
+      <td>WESTERN MICHIGAN UNIVERSITY</td>
+      <td>Year-End (July 1 - Dec 31)</td>
+      <td>WESTERN MICHIGAN UNIVERSITY</td>
+      <td>89625.0</td>
+      <td>NaN</td>
+      <td>2004</td>
+      <td>YEAR-END REPORT</td>
+      <td>0CA38934-DEED-4F39-86C3-9FC7ADCE5E3F</td>
+      <td>WESTERN MICHIGAN UNIVERSITY</td>
+      <td>WESTERN MICHIGAN UNIVERSITY</td>
+      <td>WESTERN MICHIGAN UNIVERSITY</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>4995</th>
+      <td>[IND]</td>
+      <td>EASTERN BAND OF CHEROKEE INDIANS</td>
+      <td>4th Quarter (Oct 1 - Dec 31)</td>
+      <td>Ietan Consulting, LLC</td>
+      <td>45000.0</td>
+      <td>[{'text': 'Appropriations, Federal Recognition...</td>
+      <td>2012</td>
+      <td>FOURTH QUARTER REPORT</td>
+      <td>17395418-BC90-44D6-A849-F6B9193E557B</td>
+      <td>EASTERN BAND OF CHEROKEE INDIANS</td>
+      <td>EASTERN BAND OF CHEROKEE INDIANS</td>
+      <td>EASTERN BAND OF CHEROKEE INDIANS</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4996</th>
+      <td>[ECN, HOU, RES, BAN, SMB, BUD]</td>
+      <td>None</td>
+      <td>UNDETERMINED</td>
+      <td>Theodosiou Consultants</td>
+      <td>NaN</td>
+      <td>[{'text': '', 'issue': 'BAN', 'id': 'HQi9XKG4o...</td>
+      <td>2005</td>
+      <td>REGISTRATION</td>
+      <td>1739598E-E0B4-44BF-B504-2A5F1E643EE7</td>
+      <td>GAHANIA REGINA</td>
+      <td>None</td>
+      <td>GAHANIA REGINA</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4997</th>
+      <td>[ECN, MED, ENG]</td>
+      <td>BIOMEDICAL RESEARCH FOUNDATION</td>
+      <td>3rd Quarter (July 1 - Sep 30)</td>
+      <td>Charlie McBride Associates</td>
+      <td>7200.0</td>
+      <td>[{'text': 'To monitor legislation affecting me...</td>
+      <td>2010</td>
+      <td>THIRD QUARTER REPORT</td>
+      <td>17397D1B-5886-400C-8846-3A22F378F543</td>
+      <td>Biomedical Research Foundation of Northwest Lo...</td>
+      <td>BIOMEDICAL RESEARCH FOUNDATION</td>
+      <td>Biomedical Research Foundation of Northwest Lo...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4998</th>
+      <td>[HCR, SCI, FOR, ECN, TEC, IMM, TRD, EDU, AGR]</td>
+      <td>AFRICANFEDERAL GROUP LLC</td>
+      <td>UNDETERMINED</td>
+      <td>African Federal Group, LLC</td>
+      <td>NaN</td>
+      <td>[{'text': 'African Development issues. African...</td>
+      <td>2012</td>
+      <td>REGISTRATION AMENDMENT</td>
+      <td>173985A3-3532-432F-93FF-262F1F7E9E67</td>
+      <td>AFRICANFEDERAL GROUP LLC</td>
+      <td>AFRICANFEDERAL GROUP LLC</td>
+      <td>AFRICANFEDERAL GROUP LLC</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4999</th>
+      <td>[]</td>
+      <td>Allergan Inc.</td>
+      <td>4th Quarter (Oct 1 - Dec 31)</td>
+      <td>Dutko Worldwide, LLC d/b/a Grayling</td>
+      <td>30000.0</td>
+      <td>[{'text': '
+ 
+', 'gov_entities': [], 'id': 'Je...</td>
+      <td>2013</td>
+      <td>FOURTH QUARTER (NO ACTIVITY)</td>
+      <td>17399759-7CBF-420B-969E-307B8AC7AA59</td>
+      <td>Allergan, Inc.</td>
+      <td>Allergan Inc.</td>
+      <td>Allergan, Inc.</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+<p>5000 rows × 14 columns</p>
+</div>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -13250,7 +13683,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;lobbyists&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -13264,7 +13697,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;lobbyists&#39;</span><span class="p">],</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -13278,13 +13711,197 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[20]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>issue_codes</th>
+      <th>received</th>
+      <th>has_amendments</th>
+      <th>client_name</th>
+      <th>period</th>
+      <th>registrant</th>
+      <th>amount</th>
+      <th>specific_issues</th>
+      <th>year</th>
+      <th>is_latest_amendment</th>
+      <th>...</th>
+      <th>client.name</th>
+      <th>client.naics</th>
+      <th>client.gvkey</th>
+      <th>client.ticker</th>
+      <th>client.id</th>
+      <th>client.bvdid</th>
+      <th>lobbyists</th>
+      <th>sponsors</th>
+      <th>affiliated_orgs</th>
+      <th>foreign_entities</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>[HCR]</td>
+      <td>1492187423</td>
+      <td>False</td>
+      <td>NYU HOSPITALS CENTER</td>
+      <td>1st Quarter (Jan 1 - Mar 31)</td>
+      <td>NYU Hospitals Center</td>
+      <td>20000.0</td>
+      <td>[{'text': 'AHCA,Continued funding and insuranc...</td>
+      <td>2017</td>
+      <td>False</td>
+      <td>...</td>
+      <td>NYU HOSPITALS CENTER</td>
+      <td>None</td>
+      <td>None</td>
+      <td>Unlisted</td>
+      <td>None</td>
+      <td>US127875960L</td>
+      <td>[Ventresca-Ecroyd, Gilda]</td>
+      <td>[[Klobuchar, Amy, Democrat]]</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>[HCR, LBR, TAX, CIV]</td>
+      <td>1295553772</td>
+      <td>False</td>
+      <td>INDEPENDENT ELECTRICAL CONTRACTORS INC</td>
+      <td>4th Quarter (Oct 1 - Dec 31)</td>
+      <td>Independent Electrical Contractors, Inc.</td>
+      <td>54513.0</td>
+      <td>[{'text': 'Employee Free Choice Act - H.R. 140...</td>
+      <td>2010</td>
+      <td>False</td>
+      <td>...</td>
+      <td>INDEPENDENT ELECTRICAL CONTRACTORS, INC</td>
+      <td>236115</td>
+      <td>None</td>
+      <td>Unlisted</td>
+      <td>None</td>
+      <td>US148595324L</td>
+      <td>[Hinton, Steve, Worth, Brian]</td>
+      <td>[[Frank, Barney, Democrat]]</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>[TAX, TRD, GAM, BAN, CPT, CSP]</td>
+      <td>1437057607</td>
+      <td>False</td>
+      <td>MasterCard Inc</td>
+      <td>2nd Quarter (Apr 1 - June 30)</td>
+      <td>The Smith-Free Group</td>
+      <td>70000.0</td>
+      <td>[{'text': 'H.R.9, Innovation Act (All sections...</td>
+      <td>2015</td>
+      <td>False</td>
+      <td>...</td>
+      <td>MASTERCARD Worldwide</td>
+      <td>522210</td>
+      <td>160225</td>
+      <td>Unlisted</td>
+      <td>None</td>
+      <td>CL590496804</td>
+      <td>[Barbour, Andrew, Deuser, Jack S., Locke, W. T...</td>
+      <td>[[Carper, Thomas, Democrat]]</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>[TRD]</td>
+      <td>1248117294</td>
+      <td>False</td>
+      <td>MILLIKEN &amp; CO</td>
+      <td>2nd Quarter (Apr 1 - June 30)</td>
+      <td>MILLIKEN &amp; COMPANY</td>
+      <td>60000.0</td>
+      <td>[{'text': 'HR 2847; Defense Approps (Yet to be...</td>
+      <td>2009</td>
+      <td>False</td>
+      <td>...</td>
+      <td>MILLIKEN &amp; COMPANY</td>
+      <td>339999</td>
+      <td>None</td>
+      <td>Unlisted</td>
+      <td>None</td>
+      <td>US120565447L</td>
+      <td>[Dutilh, Katherine, Nash, John, Tantillo, Augu...</td>
+      <td>[[Leahy, Patrick, Democrat]]</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>[LBR]</td>
+      <td>1240263069</td>
+      <td>False</td>
+      <td>INTERNATIONAL UNION OF BRICKLAYERS &amp; ALLIED CRAFT</td>
+      <td>1st Quarter (Jan 1 - Mar 31)</td>
+      <td>Bartley O'Hara</td>
+      <td>NaN</td>
+      <td>[{'text': 'Working to gather support for prope...</td>
+      <td>2009</td>
+      <td>False</td>
+      <td>...</td>
+      <td>International Union of Bricklayers &amp; Allied Cr...</td>
+      <td>238140</td>
+      <td>None</td>
+      <td>Unlisted</td>
+      <td>None</td>
+      <td>US130397937L</td>
+      <td>[O'Hara, Bartley]</td>
+      <td>[[Lieberman, Joseph, Independent]]</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 24 columns</p>
+</div>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -13326,7 +13943,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">dfviz</span> <span class="o">=</span> <span class="n">df</span>
@@ -13339,7 +13956,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Standard plotly imports</span>
@@ -13357,10 +13974,71 @@ div#notebook {
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+        <script type="text/javascript">
+        window.PlotlyConfig = {MathJaxConfig: 'local'};
+        if (window.MathJax) {MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}
+        if (typeof require !== 'undefined') {
+        require.undef("plotly");
+        requirejs.config({
+            paths: {
+                'plotly': ['https://cdn.plot.ly/plotly-latest.min']
+            }
+        });
+        require(['plotly'], function(Plotly) {
+            window._Plotly = Plotly;
+        });
+        }
+        </script>
+        
+</div>
+
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+        <script type="text/javascript">
+        window.PlotlyConfig = {MathJaxConfig: 'local'};
+        if (window.MathJax) {MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}
+        if (typeof require !== 'undefined') {
+        require.undef("plotly");
+        requirejs.config({
+            paths: {
+                'plotly': ['https://cdn.plot.ly/plotly-latest.min']
+            }
+        });
+        require(['plotly'], function(Plotly) {
+            window._Plotly = Plotly;
+        });
+        }
+        </script>
+        
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[49]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">dfviz</span><span class="p">[</span><span class="s1">&#39;client.legal_name&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iplot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;hist&#39;</span><span class="p">,</span> <span class="n">xTitle</span><span class="o">=</span><span class="s1">&#39;Clients&#39;</span><span class="p">,</span>
@@ -13385,21 +14063,21 @@ div#notebook {
 <div>
         
         
-            <div id="2b11f417-7b41-4167-9395-eb4aec5ae364" class="plotly-graph-div" style="height:525px; width:100%;"></div>
+            <div id="97f7102d-6dd9-4c60-94cf-312fcfc2d18a" class="plotly-graph-div" style="height:525px; width:100%;"></div>
             <script type="text/javascript">
                 require(["plotly"], function(Plotly) {
                     window.PLOTLYENV=window.PLOTLYENV || {};
                     window.PLOTLYENV.BASE_URL='https://plot.ly';
                     
-                if (document.getElementById("2b11f417-7b41-4167-9395-eb4aec5ae364")) {
+                if (document.getElementById("97f7102d-6dd9-4c60-94cf-312fcfc2d18a")) {
                     Plotly.newPlot(
-                        '2b11f417-7b41-4167-9395-eb4aec5ae364',
-                        [{"histfunc": "count", "histnorm": "", "marker": {"color": "rgba(255, 153, 51, 1.0)", "line": {"color": "#4D5663", "width": 1.3}}, "name": "client.legal_name", "opacity": 0.8, "orientation": "v", "type": "histogram", "uid": "5e6e6a98-f9f9-436b-914d-287e76f88388", "x": ["NYU HOSPITALS CENTER", "INDEPENDENT ELECTRICAL CONTRACTORS INC", "MasterCard Inc", "MILLIKEN & CO", "INTERNATIONAL UNION OF BRICKLAYERS & ALLIED CRAFT", "Committee to Support the Antitrust Laws", "United Parcel Service Inc", "MASSACHUSETTS MEDICAL SOCIETY", "Ralston Purina Co", "Time Warner Inc", "TRANSPORT WORKERS UNION OF AMERICA, AFL-CIO", "INTERNATIONAL SAFETY EQUIPMENT ASSOCIATION", "EDISON ELECTRIC INSTITUTE", "United States Cellular Corp", "RESPONSIBLE ENERGY SOLUTIONS INC", "ONLINE PUBLISHERS ASSOCIATION", "NATIONAL ASPHALT PAVEMENT ASSOCIATION", "MENTAL HEALTH AMERICA", "HOMES FOR AMERICA INC", "LaBarge Inc.", "AMERICAN ROAD & TRANSPORTATION BUILDERS ASSOCIATION", "TEXAS A & M RESEARCH FOUNDATION", null, "AMERICAN REGISTRY OF RADIOLOGIC TECHNOLOGIES", "Deere & Co", "MONTEREY BAY AQUARIUM", "CLEAN LINE ENERGY PARTNERS LLC", "PROMOTIONAL PRODUCTS ASSOCIATION INTERNATIONAL", "BOY SCOUTS OF AMERICA", "BRAZOS HIGHER EDUCATION SERVICE CORP", "DELTA DENTAL PLANS ASSOCIATION", "COLLEGE OF OZARKS", "Resources Legacy Fund", "NATIONAL PARK FOUNDATION", "CENTER FOR SCIENCE IN PUBLIC INTERES", "CITIZEN POTAWATOMI NATION", "American Tower Corp", "ASSOCIATION OF ACADEMIC HEALTH CENTERS I", "RUBICON WATER LIMITED", "CONSUMER DATA INDUSTRY ASSOCIATION", "NATIONAL BEEF PACKING CO LLC", "National Association of Ordnance and Explosive Waste Contractors", "HSBC Finance Corp", "SOUTHERN ENVIRONMENTAL LAW CENTER", "HOSPITAL SERVICE ASSOCIATION OF NORTHEAS", "UNIVERSITY SCHOOL OF MEDICINE", "REDEVELOPMENT AGENCY OF CITY OF SUIS", "Siemens AG", "GULF STATES ASSOCIATION OF HOMES & SERVICES FOR THE AGING", "3M Co", "INTERNATIONAL BROTHERHOOD OF TEAMSTERS", "SANTA YNEZ BAND-CHUMASH INDNS", "Energy Alternatives for the 21st Century", "BUHLER QUALITY YARNS CORP", "AMERICAN NURSES ASSOCIATION", null, "NATIONAL RESTAURANT ASSOCIATION", "THE SWEATER COMPANY LIMITED", "LABORERS INTERNATIONAL UNION OF NORTH AMERICA", "GEORGETOWN DIVIDE PUBLIC UTILITY DISTRICT", "HUMANE SOCIETY OF UNITED STATES THE", "Genzyme Corp", "Schwab (Charles) Corp", "RETIRED STATE EMPLOYEES ASSOCIATION", "COMMUNITY FOUNDATION FOR THE ALLEGHENIES", "NAIOP", "Comcast Corp", "AIR CANADA", "SACRAMENTO COUNTY", "TAMPA PORT AUTHORITY INC", "ROBERT BOSCH LLC MASTER RETIREMENT TRUST", null, "(THE LIVINGSTON GROUP) ESM SMT INC", "BLUE ORIGIN LLC", "Spectra Energy Corp", "Goldman Sachs Group Inc (The)", "Verizon Communications Inc", "EDISON ELECTRIC INSTITUTE", "II-VI ADVANCED MATERIALS DEVELOPMENT CENTER", "ADVOCATE HEALTH CARE", "EMERALD INTERNATIONAL CORPORATION LIMITED", "Washington Mutual", "Alpha Natural Resources Inc", "BLUE CROSS & BLUE SHIELD ASSOCIATION", "Total System Services Inc.", "US APPLE ASSOCIATION INC", "VMware Inc", "CITY OF BAYTOWN", "TECO Energy Inc.", "McAfee Inc", "UNITED STEELWORKERS", "SGT INC", "CITY OF HENDERSON", "DANIELLA MARIA ARTURI FOUNDATION", "ECLIPSE INC", "Ad Network Educational Consortium", "NATIONAL CAMP ASSOCIATION INC", "CORPORATION FOR ENTERPRISE DEVELOPMENT", "Alliance for Global Food Security", "HOLCIM (US) INC.", "NATIONAL CABLE & TELECOMMUNICATIONS ASSC", "PARSONS BRINCKERHOFF INC", "NATIONWIDE CHILDRENS HOSPITAL INC", "Bavarian Nordic", "Renaissance Learning Inc", "Merck & Co Inc.", "JOINT COMMISSION ON ACCREDITATION OF HEALTHCARE ORGANIZATIONS", "YUM! Brands Inc.", "NATIONAL ASSOCIATION OF HOME BUILDERS", "Altria Group Inc", "MeadWestvaco Corp", "USA RICE FEDERATION", "Xcel Energy Inc.", "ASSOCIATED EQUIPMENT DISTRIBUTORS", "CHAMBER OF COMMERCE OF USA", "Celanese Corp", "Evergreen Energy Inc", "Intuit Inc.", "NATIONAL CABLE & TELECOMMUNICATIONS ASSC", "MOTLEY RICE LLC", "Honeywell International Inc", "GTOWN JESUIT COMMUNITY HOUSE", "Atanor Cia Nacional Para La Industria Quimica Sa Atan", "CITY OF JASPER", "THE FEDERATION OF KOREAN INDUSTRIES CORP.", "NEWSPAPER ASSOCIATION OF AMERICA", "Experian Plc", "UNITED STEELWORKERS", "AMERICAN SHORT LINE & REGIONAL RAILROAD ASSOCIATION", "Schwab (Charles) Corp", "Marsh & McLennan Companies Inc.", "VESTAS-AMERICAN WIND TECHNOLOGY INC", "TRACFONE WIRELESS", "Amgen Inc", "LOS ANGELES COUNTY METROPOLITAN TRANSPORTATION AUTHORITY", "MORTON GROVE PHARMACEUTICALS INC", "Pinnacle West Capital Corp", "NATIONAL COUNCIL OF TEACHERS OF ENGLISH", "Phoenix Cos Inc. (The)", "VALLEY FIG GROWERS INC", "ASSOCIATED BUILDERS AND CONTRACTORS SDN BHD", "Home Depot Inc. (The)", "Scholastic Corp", "KOREAN ASSOCIATION FOR HIGHER EDUCATION", "NATIONAL FISHERIES INSTITUTE", "BOYS TOWN NATIONAL RESEARCH HOSPITAL", "ENVIRONMENT AMERICA", "Bavarian Nordic", "Southern Co (The)", "GENERIC PHARMACEUTICAL ASSOCIATION", "GENETICS & IVF INSTITUTE INC", "PORT OF LOS ANGELES", "JBS USA Holdings Inc", "SERVICE EMPLOYEES INTERNATIONAL UNION", "MIDFIRST BANK", "BLUE CROSS & BLUE SHIELD OF ARIZONA INC", "Bank of America Corp", "ADVANCED TECHNOLOGY ASSOCIATES INC", "AMERICAN ASSOCIATION OF DIABETES EDUCATORS", "SAN JOAQUIN VALLEY AIR POLLUTION CONTROL DISTRICT", "Supreme Group USA, LLC", "ASSINIBOINE AND SIOUX TRIBES OF THE FORT PECK RESERVATION", "DIRECT ENERGY", "AMERICAN BOOK PRODUCERS ASSOCIATION INC", "AMERICAN CABLE ASSOCIATION", "Dean Foods Co", "NATIONAL EMPLOYMENT LAWYERS ASSOCIATION", "PROENGLISH A PROJECT OF U S INC", "INTERACTIVE ADVERTISING BUREAU", "ASSOCIATION OF NATIONAL ADVERTISERS INC", "DSM-NORTH AMERICA INC", "NATIONAL INDUSTRIES FOR BLIND", "NATIONAL RESTAURANT ASSOCIATION", "(THE LIVINGSTON GROUP) BOYS TOWN USA", "CITY UTILITIES", "U.S. Chamber of Commerce Institute for Legal Reform", "Coalition for Home Fire Safety", "MERCED IRRIGATION DISTRICT", "APOLLO MANAGEMENT LP", "CASSIDY ASSOCIATES INC", "CVS Health Corp", "WINE & SPIRITS WHOLESALERS", "Covidien Plc", "Exxon Mobil Corp", null, "Siemens AG", "Emergent BioSolutions Inc", "Marathon Petroleum Corp", "MUNICIPALITY OF ANCHORAGE", "SIMMONS BROWDER GIANARIS ANGELIDES & BARNERD LLC", "AMERICAS HEALTH INSURANCE PLANS INC", "AMERICAN DENTAL ASSOCIATION", "GENERAL ATOMICS", "CONAIR CORP", "FINANCIAL ACCOUNT FOUNDATION", "NORTHWESTERN MEMORIAL HOSPITAL", "DUNKIN BRANDS INC", "AMERICAN HEALTH CARE ASSOCIATION", "NATIONAL THOROUGHBRED RACING ASSOCIATION", "NATIONAL ASSOCIATION OF MUTUAL INSURANCE", "QUANTUM RESEARCH INTERNATIONAL INC", "NATIONAL GRAIN & FEED ASSOCIATION INC", "GREAT LAKES HIGHER EDUCATION CORP", "METROPOLITAN TRANSIT AUTHORITY OF HARRIS COUNTY", "NATIONAL ASSOCIATION OF COMMUNITY HEALTH CENTERS", "VIEJAS BAND OF KUMEYAAY INDIANS", "ELECTRIC DRIVE TRANSPORTATION ASSOCIATION", "Alphabet Inc", "Comcast Corp", "ASSOCIATION OF UNITED STATES", "CUYAHOGA COMMUNITY COLLEGE", "NATIONAL HERITAGE ACADEMIES", "AMERICAN ASSOCIATION FOR GERIATIC PSYCHI", "HUMANE SOCIETY OF U S", "GENERIC PHARMACEUTICAL ASSOCIATION", "CITIZENS FOR RESPONSIBILITY AND ETHICS IN WASHINGTON", "CHILD WELFARE LEAGUE OF AMERICA", "BOYS TOWN TEXAS INC", "TRANSAMERICA CONSTRUCOES E SERVICOS LTDA", "Emerson Electric Co.", "Visa Inc", "Genworth Financial Inc", "IOWA HOSPITAL ASSOCIATION", "CHILDRENS HOSPITAL OF PITTSBURGH", "COMMUNITY CATALYST", "INTERNATIONAL CODE COUNCIL", "BIOTECHNOLOGY INDUSTRY ORGANIZATION", "INDIAN HEAD DEFENSE ALLIANCE", "RIO GRANDE WATER CONSERVATION DISTRICT", "CROP INSURANCE SERVICE INC", "UNIVERSITY OF MIAMI", "Alcan Inc.", "Genzyme Corp", "CONTINUA HEALTH ALLIANCE", "AMERICAN THORACIC SOCIETY INC", "AMERICAN SOCIETY FOR GASTROINTESTINAL EN", "AUSTIN PEAY STATE UNIVERSITY", "CALVIN SR & CALVIN JR & WALTER E & JONATHAN STRANGE", "UNITED FOOD & COMMERCIAL WORKERS INTERNATIONAL UNION", "EMERALD INTERNATIONAL CORPORATION LIMITED", "BACARDI USA INC", "Comcast Corp", "CERBERUS CAPITAL MANAGEMENT LP", "National Oilwell Varco Inc", "AMERICAN BUYERS ASSOCIATION CORP", "INSTITUTE OF MAKERS OF EXPLOSIVES", "NATIONAL ALLIANCE OF FOREST OWNERS", "AT&T Inc", "CONNECTICUT SOCIETY OF MORTGAGE BROKERS", "Bridgestone Corp", "COUNTY OF DOUGLAS", "Swedish Match AB Frueher Svenska Taendsticks AB", "ALLIANCE OF AUTOMOBILE MANUFACTURERS INC", "NEUROTECHNOLOGY INDUSTRY ORGANIZATION", "Twenty-First Century Fox Inc", "Perrigo Co Plc", "Alphabet Inc", "MUNITIONS INDUSTRIAL BASE TASK FORCE", "Metlife Inc.", "IMPACT CAPITAL PARTNERS LIMITED", "BG North America (F.K.A. British Gas North America)", "Northrop Grumman Corp", "RURAL COMMUNITY DEVELOPMENT CONSULTANTS", "Coalition for Donor State Equity", "MAXIM INFORMATION TECHNOLOGY SDN. BHD.", "NATIONAL COTTON COUNCIL", "NATIONAL ATHLETIC TRAINERS ASS", "MORTGAGE INSURANCE COMPANIES OF AMERICA", "SHAWNEE TRIBE", "MUTUAL OF OMAHA INC", "US GLOBAL LEADERSHIP CAMPAINGN", "VOLUNTEERS OF AMERICA", "OCEAN CHAMPIONS", "BALL AEROSPACE & TECHNOLOGIES CORP", "DESIGN BUILD INSTITUTE OF AMERICA", "STIRLING ENERGY SYSTEMS LIMITED", "INTERNATIONAL MYELOMA FOUNDATION", "HP Inc", "Cincinnati Financial Corp", "U.S. Chamber of Commerce - Center for Capital Markets Competitiveness", "LOVELACE RESPIRATORY RESEARCH INSTITUTE", "VISITING NURSES FOUNDATION INC", "OWNER-OPERATOR INDEPENDENT DRIVERS ASSOCIATION", "Volkswagen AG, Wolfsburg", "TEXAS A & M UNIVERSITY SYSTEM", "Rent-A-Center Inc", "BERKSHIRE HATHAWAY ENERGY CO", "AMERICAN CHEMISTRY COUNCIL INC", "UTAH TRANSIT AUTHORITY", "MARQUETTE UNIVERSITY", "Alkermes Plc", "Bank of New York Mellon Corp (The)", "Burlington Northern Santa Fe LLC", "OAKTREE CAPITAL MANAGEMENT L P", "Protective Life Corp", "AMERICAN ACADEMY OF DERMATOLOGY INC", "Temple-Inland Inc.", "MARS INC", "Ally Financial Inc", "Entegris Inc", "CORINTH HEALTH PARTNERS LLC", "Principal Financial Group Inc.", "AmerisourceBergen Corp", "COMMUNITY FINANCIAL SERVICES ASSOCIATION", "Anheuser-Busch Companies Inc", null, "Amgen Inc", "AMERICAN DIABETES ASSOCIATION", "Con-Way Inc", "International Business Machines Corp", "AMERICAN INSURANCE ASSOCIATES", "MASSACHUSETTS INSTITUTE OF TECHNOLOGY INC", "ALLIED PILOTS ASSOCIATION", "AMERICAN CHEMISTRY COUNCIL INC", "SALTCHUK RESOURCES INC", "MAYO CLINIC", "YAKIMA BASIN STORAGE ALLIANCE", "Science Applications International Corp", "DOLORES WATER CONSERVANCY DISTRICT", "PUBLIC POWER COUNCIL", "Biogen Inc", "Simon Property Group Inc.", "Vanguard Health Systems Inc.", "EVANGELICAL LUTHERAN GOOD SAMARITAN SOCIETY", "Friends of the Global Fight Against AIDS, Tuberculosis and Malaria", "QTL BIOSYSTEMS LLC", "Con-Way Inc", "NATIONAL ASSOCIATION OF COMMUNITY HEALTH CENTERS", "Blue Source,  LLC", "IMPERIAL IRRIGATION DISTRICT", "MasterCard Inc", null, "Vertex Pharmaceuticals Inc", "DeVry Education Group Inc", null, "BLUE ORIGIN LLC", "COMPRESSED GAS ASSOCIATION INC", "TOWN OF QUEEN CREEK", "SMALL BUSINESS INVESTOR A", "Genentech Inc", "Heli Ski US/US - Heli Skiing Association", "AMERICAN HEALTH QUALITY ASSN", "Intelsat SA", "BREWSTER / JORY ASSOCIATES LLC", "HALLMARK CARDS INC", "INTERNATIONAL FACILITY MANAGEMENT ASSN", "Boy Scouts of America (Indian Nations Council)", "San Bernardino Associated Governments", "Airlines for America", "BATES UNIFORM FOOTWEAR", "American Capital Ltd", "BECHTEL NATIONAL INC", "PROPERTY CASUALTY INSURERS ASSOCIATION O", "Novartis AG", "Celgene Corp", "SOUTHWEST COUNCIL OF AGRIBUSINESS", "Franciscan Alliance (f/k/a Sisters of St. Franciscan Health Services)", "National Tobacco Company", "National Grid", "DMB ASSOCIATES INC", "UNDERWRITERS LABORATORIES INC", "MCNEIL CONSUMER HEALTHCARE", "Computer Sciences Corp", "NEUROFIBROMATOSIS INC MID ATLANTIC", "Glaxosmithkline PLC", "CONSORTIUM FOR WORKER EDUCATION INC", "TOWERS WATSON LIMITED", "American Superconductor Corp", "PORT OF LOS ANGELES", "HollyFrontier Corp", "BlackBerry Ltd", "Chemtura Corp", "SECURE DATA IN MOTION INC", "DigitalGlobe Inc", "AIRPORTS COUNCIL INTERNATIONAL -- NORTH AMERICA", "Cook Children's Health Care System", "BROTHERHOOD OF RAILROAD SIGNALMEN", "Oracle Corp", "BAE Systems Canada Inc", "ARKANSAS FARM BUREAU FEDERATION", "General Motors Co", null, "NATIONAL ASSOC PSYCHIATRIC", null, null, "CAMPAIGN FOR HOME ENERGY ASSISTANCE", "Koninklijke Philips NV", "Applied Biosystems Inc", "Intelsat SA", "AUTOMATION ALLEY", "AMERICANS FOR PROSPERITY", "AMERICAN FOREST & PAPER ASSOCIATION INC", "BUHLER QUALITY YARNS CORP", "MARION COUNTY, OHIO", "ASPHALT ROOFING MANUFACTURERS ASSOCIATION", "INTERNATIONAL CEMETERY & FUNERAL ASSOC", "National Utility Contractors Association", "SEAFREEZE LTD", "Lennox International Inc.", "DIGITAL MEDIA ASSOCIATION", "Marathon Petroleum Corp", "AFL-CIO", "iHeartMedia Inc", "AMERICAN MOSQUITO CONTROL", "Options Clearing Corporation", "NESTLE WATERS NORTH AMERICA INC", "FEDERAL BAR ASSOCIATION", "Molina Healthcare Inc.", "CLOVER PARK SCHOOL DISTRICT", "ASSOCIATION OF METROPOLITAN WATER AGENCY", "QUEST INTEGRATED INC", "WORLDATWORK", null, "QUALCOMM Inc.", "Target Corp", "AMERICAN ASSOCIATION FOR CLINICAL CHEMISTRY INC", "B C POLITICAL STRATEGIES INC", "Association for Molecular Pathology", "NATIONAL KIDNEY FOUNDATION INC", "AMERICAN APPAREL & FOOTWEAR ASSOCIATION", "ALUTIIQ MANAGEMENT SERVICES", "AIR TRANSPORT ASSOCIATION OF AMERICA INC", "ARGUS MEDIA INC", "Texas Instruments Inc", "MUSCULAR DYSTROPHY ASSOCIATION INC", "IOWA FARM BUREAU FEDERATION", "The Puerto Rico Equality Forum", "ALSTOM TRANSPORTATION INC", "CF Industries Holdings Inc", "Endo International plc", "DAIRYLEA COOPERATIVE INC", "Huntington Bancshares Inc", "POTOMAC STRATEGIC DEVELOPMENT CO LLC ON BEHALF OF LIONS CLUBS INTERNATIONAL", "NATIONAL IMMIGRATION FORUM", "AMERICAN GREYHOUND TRACK OPERATORS ASSOCIATION", "EMPRESAS FONALLEDAS", "AMERICAN COUNCIL OF LIFE INSURERS", "DaVita HealthCare Partners Inc", "TELECOMMUNICATIONS INDUSTRY ASSOCIATION", "FMC Corp.", "GREETING CARD ASSOCIATION", "HEALTHCARE ASSN OF NEW YORK STATE", "PG&E Corp", "Accenture PLC", "STICHTING INTERNATIONAL ASSOCIATION OF EMERGENCY MANAGERS-NEDERLAND", null, "Aetna Inc.", "Pfizer Inc", "SOUTHWEST AIRLINES PILOTS ASSOCIATION", "Z GEN", null, "SANTA CRUZ METROPOLITAN TRANSIT DISTRICT", "PORT OF HOOD RIVER", "NATIONAL CABLE & TELECOMMUNICATIONS ASSC", null, "AFTERSCHOOL ALLIANCE", "Calpine Corp", "RETAIL INDUSTRY LEADER ASSOCIATION INC T", "MORPHO TRUST USA INC", "PEOPLE FOR AMERICAN WAY", "Exxon Mobil Corp", "FIRST WIND ENERGY LLC", "Pfizer Inc", "FEDERATION OF AMERICAN HOSPITALS INC", "ASTELLAS PHARMA US LLC", "MBIA Inc.", "Exelis Inc", "Aetna Inc.", "Velocys PLC", "Lockheed Martin Corp", "BRIDGEPORT PORT AUTHORITY", "NATIONAL ELECTRICAL MANUFACTURERS ASSOCIATION", "PORT ST LUCIE", "St. Jude Medical Inc.", "NATIONAL ASSOCIATION OF BROADCASTERS", "Adobe Systems Inc", null, "ROMAX MANAGEMENT GROUP", "CCN AMERICA LP", "Travelers Companies Inc (The)", "Verizon Communications Inc", "Peabody Energy Corp", "Beam Inc", "BOEHRINGER INGELHEIM PHARMACEUTICALS INC", "KANSAS FARM BUREAU", "ALABAMA FARMERS FEDERATION", "Verizon Communications Inc", "EDP RENEWABLES NORTH AMERICA LLC", "PERLES LAW FIRM", "Electrochemical Oxygen Concepts, Inc. dba EO2 Concepts", "Endo International plc", "CTIA-THE WIRELESS ASSOCIATION", "TEXAS CLASSROOM TEACHERS ASSOCIATION", "INTERNATIONAL ASSOCIATION OF AIRPORT DUTY FREE STORES", "KOCH CO PUBLIC SECTOR", "OCEAN SPRAY CRANBERRIES INC", "Novartis AG", "Owens-Illinois Inc.", "PHARMACEUTICAL RESEARCH & MANUFACTURERS OF AMERICA", "AMERICAN MEDICAL ASSOCIATION", "Verizon Communications Inc", "Microsoft Corp", "NATIONAL ASSOCIATION OF CONSERVATION DIS", "ASSOCIATION OF AMERICAN RAILROADS", "NATIONAL AFFORDABLE HOUSING MANAGEMENT A", "Intuit Inc.", "FedEx Corp.", "AMERICAN ACADEMY OF DERMATOLOGY INC", "Herbalife Ltd", "COUNCIL ON SOCIAL WORK EDUCATION", "AMERICAN SHEEP INDUSTRY ASSOCIATION", "Caesars Entertainment Corp", "Marathon Oil Corp", "PHYSICIAN INSURERS ASSOCIATION OF AMERICAN", "EMERGISOFT CORP", "ENVIRONMENTAL TECHNOLOGY COUNCIL", "MASSACHUSETTS MEDICAL SOCIETY", "COALITION TO STOP GUN VIOLENCE", "EXPLO SP. Z O.O.", null, "MIAI DADE COUNTY SCHOOL BOA", "CITY OF ALBANY", "AMERICAN SOCIETY OF ADDICTION MEDICINE", "Verizon Communications Inc", "Clean Energy Fuels Corp", "Computer Sciences Corp", "CITY OF BERKELEY", "AMERICAN FOREST & PAPER ASSOCIATION INC", "PLANETARY RESOURCES INC", "ICKES AND ENRIGHT GROUP (OBO NEW YORK HALL OF SCIENCE)", "AMERICAN HEALTH CARE ASSOCIATION", "eBay Inc.", "AMERICAN ACADEMY OF PEDIATRIC DENTISTRY", "Glaxosmithkline PLC", "IRELAND CARROLL & KELLEY PC", "AMERICAN WIND ENERGY ASSOCIATION", "DIRECTV", "COMPUCREDIT CORP", "WageWorks Inc", "AMERICAN DIETETIC ASSOCIATION", "KANSAS CITY & MISSOURI", null, "KEYS FISHERIES MARKET & MARINA", "INVESTMENT COMPANY INSTITUTE", "NATIONAL HISPANIC MEDICAL ASSOCIATION", "AIRTRAN AIRWAYS", "eBay Inc.", "UNITED STATES HISPANIC CHAMBER OF COMMER", "PENSION REFORM ACTION COMMITTEE", "American Airlines Group Inc", "BP PLC", "MILLIKEN & CO", "CHILDRENS HOSPITAL OF CHICAGO", "NATIONAL EXPRESS CORP", "NATIONAL RENDERERS ASSOCIATION INC", "EMD SERONO INC", "MOTOR & EQUIPMENT MANUFACTURER ASSOCIATION", null, "SUPERVALU INC.", "Unilever NV", "MISSOURI HOSPITAL ASSOCIATION", "CITY & BOROUGH OF JUNEAU", "DEPARTMENT FOR PROFESSIONAL EMPLOYEES AF", "Southern Co (The)", "Lockheed Martin Corp", "COALITION TO PROMOTE U S AGRICULTURAL EXPORTS", "DCI LLC", "UNIVERSITY OF ILLINOIS", "NJ ASSOCIATION OF SHARED AIRCRAFT PILOTS", "GREATER NEW ORLEANS INC", "NATIONAL KIDNEY FOUNDATION INC", "ITT Educational Services Inc", "SOCIETY OF THE PLASTICS INDUSTRY INC", "JEWISH FEDERATION OF METROPOLITAN CHICAGO (JFMC)", "eHealth Inc", "MADISON METROPOLITAN SEWERAGE DISTRICT", "MAGAZINE PUBLISHERS OF AMERICA", "Network Ltd", "ERNST & YOUNG LLP", "BioCryst Pharmaceuticals Inc", "COLLEGE SAVINGS FOUNDATION", "Reckitt Benckiser Group PLC", "NATIONAL RETAIL FEDERATION", "CENTRAL UTAH WATER CONSERVANCY DISTRICT", "Wal-Mart Stores Inc", "CBS Corp", "ACTION NOW INC", "CITY OF PUEBLO CO", "NOBLIS INC", "UMG RECORDINGS INC", null, "AMERICAN BENEFITS COUNCIL", "MICHIGAN MANUFACTURING TECH CENTER", "INGLEWOOD-CA CITY OF", "Photocure ASA", "GENOA HEALTH CARE CONSULTING LLC", "SCANA Corp", "NATIONAL PORK PRODUCERS COUNCIL", null, "AMERICAN PHYSIOLOGICAL SOCIETY", "NATIONAL COMMITTEE TO PRESERVE SOCIAL SECURITY & MEDICARE", "NATIONAL ASSOCIATION OF CHAIN DRUG STORE", "ALABAMA COUSHATTA TRIBE OF TEXAS", "UNITED STATES PHARMACOPEIA BRASIL LTDA.", "Visa Inc", "Franciscan Alliance (f/k/a Sisters of St. Franciscan Health Services)", "Raytheon Co.", "AMERICAN CHEMISTRY COUNCIL INC", "Angel Capital Association", "AMERICAN ACADEMY OF ACTUARIES", "Eastman Kodak Co", "CALIFORNIA WHEAT COMMISSION", "CITY OF JACKSON MS PURCH", "NATIONAL RURAL ELECTRIC COOPERATIVE ASSOCIATION", "Deutsche Post AG", "Darden Restaurants Inc.", "Fidelity National Information Services Inc", null, "HUMAN RIGHTS FIRST INC", "MEGGITT DEFENSE SYSTEMS-CASWELL", null, "CITY OF JACKSON", "MARS INC", "Siemens AG", "INTERACTIVE ADVERTISING BUREAU", "AT&T Inc", "KLA-TENCOR MIE GMBH", null, "Land O'Lakes Inc.", "JOHN CRANE CANADA INC", "NOBLE BIOMATERIALS (FORMERLY NOBLE FIBER TECHNOLOGIES LLC)", "ASSOCIATION FOR ADVANCED LIFE UNDERWRITI", "ZETTACORE INC", "Fresenius Medical Care AG &Co KGAA", "Boeing Co", "Network Technology PLC", "Napa Valley Vine Trail Coalition", "AMERICAN SOCIETY OF CONSULTANT PHARMACIS", "iHeartMedia Inc", "COUNTY OF TULARE", "OH PUBLIC INTEREST RESEARCH GROUP", "NiSource Inc.", "SOCIETY FOR WORLDWIDE INTERBANK FINANCIAL TELECOMMUNICATION", "GWINNETT COUNTY GOVERNMENT", "Raytheon Co.", "BISMARCK STATE COLLEGE", "WINNING STRATIGIES WASHINGTON", "MILITIA MEMBER SERVICES", "MTS TECHNOLOGIES INC", "Missouri Coalition for Historic Preservation and Economic Development", "AMERICAN SOCIETY OF TROPICAL MEDICINE & HYGIENE", "PACIFIC SCIENCE CENTER", "3M Co", "ACT FOR AMERICA", "Conocophillips", "Plum Creek Timber Co Inc.", "PHRMA", "KURION INC", "AMERICAN ASSOCIATION FOR JUSTICE", "Hunter Douglas NV", "PEABODY INVESTMENT CORP", "ADVOCATES FOR HIGHWAY & AUTO SAFETY", "Broadcom Corp", "SOLARA HOLDINGS LIMITED", "STREAMLINED SALES TAX GOVERNING BOAR", "TRI-STATE GENERATION AND TRANSMISSION ASSOCIATION INC", "AMERICAN COUNCIL ON EDUCATION", "NATIONAL ASSOCIATION OF FOSTER GRANDPARENT PROGRAM DIRECTORS", "American Arts Alliance dba Performing Arts Alliance", "Pinnacle West Capital Corp", "NEW NAME CLUB", "Vanguard", "NATIONAL COUNCIL FOR IMPACTED SCHOOLS", "SWIFT INC", "SHEE ATIKA INC", "HEARTH PATIO & BARBECUE ASSOCIATES", "NATIONAL SOCIETY OF PROFESSIONAL ENGINEERS", "GoDaddy Inc", "NATIONAL ASSOCIATION OF LETTER CARRIERS", null, "MERIDIAN HEALTH INC", "AMERICAN OCCUPATIONAL THERAPY ASSOCIATION", "Intel Corp", "LANDMARK MEDICAL CENTER INC", "CUSTOM BROKERS & FORWARDERS ASSOCIATION", null, "AGRIBANK, FCB", "CHILDREN'S HOSPITALS ASSOCIATION FKA-NATIONAL ASSOCIATION OF CHILDREN'S HOSPITA", "AMADOR COUNTY", "CITY OF KEY WEST", "iHeartMedia Inc", "National Religious Campaign Against Torture Action Fund", "OTSUKA AMERICA PHARMACEUTICAL INC", "MEDICAL CONTINUING EDUCATION", "PRIVATE EQUITY GROWTH CAPITAL COUNCIL", "QUEST RELIABILITY", "Capitol Counsel on behalf of Westfield", "BLUE CROSS & BLUE SHIELD ASSOCIATION", "MOTION PICTURE ASSOCIATION OF AMERICA", "NATIONAL COUNCIL OF LA RAZA", "THURGOOD MARSHALL COLLEGE FUND", "NATIONAL COTTON COUNCIL", "UNIVERSITY OF CONNECTICUT", null, "Pearson PLC", "REAL ESTATE ROUNDTABLE", "Cardinal Health Inc"]}],
+                        '97f7102d-6dd9-4c60-94cf-312fcfc2d18a',
+                        [{"histfunc": "count", "histnorm": "", "marker": {"color": "rgba(255, 153, 51, 1.0)", "line": {"color": "#4D5663", "width": 1.3}}, "name": "client.legal_name", "opacity": 0.8, "orientation": "v", "type": "histogram", "uid": "62f316e2-4015-4666-a559-85c83801f7cf", "x": ["NYU HOSPITALS CENTER", "INDEPENDENT ELECTRICAL CONTRACTORS INC", "MasterCard Inc", "MILLIKEN & CO", "INTERNATIONAL UNION OF BRICKLAYERS & ALLIED CRAFT", "Committee to Support the Antitrust Laws", "United Parcel Service Inc", "MASSACHUSETTS MEDICAL SOCIETY", "Ralston Purina Co", "Time Warner Inc", "TRANSPORT WORKERS UNION OF AMERICA, AFL-CIO", "INTERNATIONAL SAFETY EQUIPMENT ASSOCIATION", "EDISON ELECTRIC INSTITUTE", "United States Cellular Corp", "RESPONSIBLE ENERGY SOLUTIONS INC", "ONLINE PUBLISHERS ASSOCIATION", "NATIONAL ASPHALT PAVEMENT ASSOCIATION", "MENTAL HEALTH AMERICA", "HOMES FOR AMERICA INC", "LaBarge Inc.", "AMERICAN ROAD & TRANSPORTATION BUILDERS ASSOCIATION", "TEXAS A & M RESEARCH FOUNDATION", null, "AMERICAN REGISTRY OF RADIOLOGIC TECHNOLOGIES", "Deere & Co", "MONTEREY BAY AQUARIUM", "CLEAN LINE ENERGY PARTNERS LLC", "PROMOTIONAL PRODUCTS ASSOCIATION INTERNATIONAL", "BOY SCOUTS OF AMERICA", "BRAZOS HIGHER EDUCATION SERVICE CORP", "DELTA DENTAL PLANS ASSOCIATION", "COLLEGE OF OZARKS", "Resources Legacy Fund", "NATIONAL PARK FOUNDATION", "CENTER FOR SCIENCE IN PUBLIC INTERES", "CITIZEN POTAWATOMI NATION", "American Tower Corp", "ASSOCIATION OF ACADEMIC HEALTH CENTERS I", "RUBICON WATER LIMITED", "CONSUMER DATA INDUSTRY ASSOCIATION", "NATIONAL BEEF PACKING CO LLC", "National Association of Ordnance and Explosive Waste Contractors", "HSBC Finance Corp", "SOUTHERN ENVIRONMENTAL LAW CENTER", "HOSPITAL SERVICE ASSOCIATION OF NORTHEAS", "UNIVERSITY SCHOOL OF MEDICINE", "REDEVELOPMENT AGENCY OF CITY OF SUIS", "Siemens AG", "GULF STATES ASSOCIATION OF HOMES & SERVICES FOR THE AGING", "3M Co", "INTERNATIONAL BROTHERHOOD OF TEAMSTERS", "SANTA YNEZ BAND-CHUMASH INDNS", "Energy Alternatives for the 21st Century", "BUHLER QUALITY YARNS CORP", "AMERICAN NURSES ASSOCIATION", null, "NATIONAL RESTAURANT ASSOCIATION", "THE SWEATER COMPANY LIMITED", "LABORERS INTERNATIONAL UNION OF NORTH AMERICA", "GEORGETOWN DIVIDE PUBLIC UTILITY DISTRICT", "HUMANE SOCIETY OF UNITED STATES THE", "Genzyme Corp", "Schwab (Charles) Corp", "RETIRED STATE EMPLOYEES ASSOCIATION", "COMMUNITY FOUNDATION FOR THE ALLEGHENIES", "NAIOP", "Comcast Corp", "AIR CANADA", "SACRAMENTO COUNTY", "TAMPA PORT AUTHORITY INC", "ROBERT BOSCH LLC MASTER RETIREMENT TRUST", null, "(THE LIVINGSTON GROUP) ESM SMT INC", "BLUE ORIGIN LLC", "Spectra Energy Corp", "Goldman Sachs Group Inc (The)", "Verizon Communications Inc", "EDISON ELECTRIC INSTITUTE", "II-VI ADVANCED MATERIALS DEVELOPMENT CENTER", "ADVOCATE HEALTH CARE", "EMERALD INTERNATIONAL CORPORATION LIMITED", "Washington Mutual", "Alpha Natural Resources Inc", "BLUE CROSS & BLUE SHIELD ASSOCIATION", "Total System Services Inc.", "US APPLE ASSOCIATION INC", "VMware Inc", "CITY OF BAYTOWN", "TECO Energy Inc.", "McAfee Inc", "UNITED STEELWORKERS", "SGT INC", "CITY OF HENDERSON", "DANIELLA MARIA ARTURI FOUNDATION", "ECLIPSE INC", "Ad Network Educational Consortium", "NATIONAL CAMP ASSOCIATION INC", "CORPORATION FOR ENTERPRISE DEVELOPMENT", "Alliance for Global Food Security", "HOLCIM (US) INC.", "NATIONAL CABLE & TELECOMMUNICATIONS ASSC", "PARSONS BRINCKERHOFF INC", "NATIONWIDE CHILDRENS HOSPITAL INC", "Bavarian Nordic", "Renaissance Learning Inc", "Merck & Co Inc.", "JOINT COMMISSION ON ACCREDITATION OF HEALTHCARE ORGANIZATIONS", "YUM! Brands Inc.", "NATIONAL ASSOCIATION OF HOME BUILDERS", "Altria Group Inc", "MeadWestvaco Corp", "USA RICE FEDERATION", "Xcel Energy Inc.", "ASSOCIATED EQUIPMENT DISTRIBUTORS", "CHAMBER OF COMMERCE OF USA", "Celanese Corp", "Evergreen Energy Inc", "Intuit Inc.", "NATIONAL CABLE & TELECOMMUNICATIONS ASSC", "MOTLEY RICE LLC", "Honeywell International Inc", "GTOWN JESUIT COMMUNITY HOUSE", "Atanor Cia Nacional Para La Industria Quimica Sa Atan", "CITY OF JASPER", "THE FEDERATION OF KOREAN INDUSTRIES CORP.", "NEWSPAPER ASSOCIATION OF AMERICA", "Experian Plc", "UNITED STEELWORKERS", "AMERICAN SHORT LINE & REGIONAL RAILROAD ASSOCIATION", "Schwab (Charles) Corp", "Marsh & McLennan Companies Inc.", "VESTAS-AMERICAN WIND TECHNOLOGY INC", "TRACFONE WIRELESS", "Amgen Inc", "LOS ANGELES COUNTY METROPOLITAN TRANSPORTATION AUTHORITY", "MORTON GROVE PHARMACEUTICALS INC", "Pinnacle West Capital Corp", "NATIONAL COUNCIL OF TEACHERS OF ENGLISH", "Phoenix Cos Inc. (The)", "VALLEY FIG GROWERS INC", "ASSOCIATED BUILDERS AND CONTRACTORS SDN BHD", "Home Depot Inc. (The)", "Scholastic Corp", "KOREAN ASSOCIATION FOR HIGHER EDUCATION", "NATIONAL FISHERIES INSTITUTE", "BOYS TOWN NATIONAL RESEARCH HOSPITAL", "ENVIRONMENT AMERICA", "Bavarian Nordic", "Southern Co (The)", "GENERIC PHARMACEUTICAL ASSOCIATION", "GENETICS & IVF INSTITUTE INC", "PORT OF LOS ANGELES", "JBS USA Holdings Inc", "SERVICE EMPLOYEES INTERNATIONAL UNION", "MIDFIRST BANK", "BLUE CROSS & BLUE SHIELD OF ARIZONA INC", "Bank of America Corp", "ADVANCED TECHNOLOGY ASSOCIATES INC", "AMERICAN ASSOCIATION OF DIABETES EDUCATORS", "SAN JOAQUIN VALLEY AIR POLLUTION CONTROL DISTRICT", "Supreme Group USA, LLC", "ASSINIBOINE AND SIOUX TRIBES OF THE FORT PECK RESERVATION", "DIRECT ENERGY", "AMERICAN BOOK PRODUCERS ASSOCIATION INC", "AMERICAN CABLE ASSOCIATION", "Dean Foods Co", "NATIONAL EMPLOYMENT LAWYERS ASSOCIATION", "PROENGLISH A PROJECT OF U S INC", "INTERACTIVE ADVERTISING BUREAU", "ASSOCIATION OF NATIONAL ADVERTISERS INC", "DSM-NORTH AMERICA INC", "NATIONAL INDUSTRIES FOR BLIND", "NATIONAL RESTAURANT ASSOCIATION", "(THE LIVINGSTON GROUP) BOYS TOWN USA", "CITY UTILITIES", "U.S. Chamber of Commerce Institute for Legal Reform", "Coalition for Home Fire Safety", "MERCED IRRIGATION DISTRICT", "APOLLO MANAGEMENT LP", "CASSIDY ASSOCIATES INC", "CVS Health Corp", "WINE & SPIRITS WHOLESALERS", "Covidien Plc", "Exxon Mobil Corp", null, "Siemens AG", "Emergent BioSolutions Inc", "Marathon Petroleum Corp", "MUNICIPALITY OF ANCHORAGE", "SIMMONS BROWDER GIANARIS ANGELIDES & BARNERD LLC", "AMERICAS HEALTH INSURANCE PLANS INC", "AMERICAN DENTAL ASSOCIATION", "GENERAL ATOMICS", "CONAIR CORP", "FINANCIAL ACCOUNT FOUNDATION", "NORTHWESTERN MEMORIAL HOSPITAL", "DUNKIN BRANDS INC", "AMERICAN HEALTH CARE ASSOCIATION", "NATIONAL THOROUGHBRED RACING ASSOCIATION", "NATIONAL ASSOCIATION OF MUTUAL INSURANCE", "QUANTUM RESEARCH INTERNATIONAL INC", "NATIONAL GRAIN & FEED ASSOCIATION INC", "GREAT LAKES HIGHER EDUCATION CORP", "METROPOLITAN TRANSIT AUTHORITY OF HARRIS COUNTY", "NATIONAL ASSOCIATION OF COMMUNITY HEALTH CENTERS", "VIEJAS BAND OF KUMEYAAY INDIANS", "ELECTRIC DRIVE TRANSPORTATION ASSOCIATION", "Alphabet Inc", "Comcast Corp", "ASSOCIATION OF UNITED STATES", "CUYAHOGA COMMUNITY COLLEGE", "NATIONAL HERITAGE ACADEMIES", "AMERICAN ASSOCIATION FOR GERIATIC PSYCHI", "HUMANE SOCIETY OF U S", "GENERIC PHARMACEUTICAL ASSOCIATION", "CITIZENS FOR RESPONSIBILITY AND ETHICS IN WASHINGTON", "CHILD WELFARE LEAGUE OF AMERICA", "BOYS TOWN TEXAS INC", "TRANSAMERICA CONSTRUCOES E SERVICOS LTDA", "Emerson Electric Co.", "Visa Inc", "Genworth Financial Inc", "IOWA HOSPITAL ASSOCIATION", "CHILDRENS HOSPITAL OF PITTSBURGH", "COMMUNITY CATALYST", "INTERNATIONAL CODE COUNCIL", "BIOTECHNOLOGY INDUSTRY ORGANIZATION", "INDIAN HEAD DEFENSE ALLIANCE", "RIO GRANDE WATER CONSERVATION DISTRICT", "CROP INSURANCE SERVICE INC", "UNIVERSITY OF MIAMI", "Alcan Inc.", "Genzyme Corp", "CONTINUA HEALTH ALLIANCE", "AMERICAN THORACIC SOCIETY INC", "AMERICAN SOCIETY FOR GASTROINTESTINAL EN", "AUSTIN PEAY STATE UNIVERSITY", "CALVIN SR & CALVIN JR & WALTER E & JONATHAN STRANGE", "UNITED FOOD & COMMERCIAL WORKERS INTERNATIONAL UNION", "EMERALD INTERNATIONAL CORPORATION LIMITED", "BACARDI USA INC", "Comcast Corp", "CERBERUS CAPITAL MANAGEMENT LP", "National Oilwell Varco Inc", "AMERICAN BUYERS ASSOCIATION CORP", "INSTITUTE OF MAKERS OF EXPLOSIVES", "NATIONAL ALLIANCE OF FOREST OWNERS", "AT&T Inc", "CONNECTICUT SOCIETY OF MORTGAGE BROKERS", "Bridgestone Corp", "COUNTY OF DOUGLAS", "Swedish Match AB Frueher Svenska Taendsticks AB", "ALLIANCE OF AUTOMOBILE MANUFACTURERS INC", "NEUROTECHNOLOGY INDUSTRY ORGANIZATION", "Twenty-First Century Fox Inc", "Perrigo Co Plc", "Alphabet Inc", "MUNITIONS INDUSTRIAL BASE TASK FORCE", "Metlife Inc.", "IMPACT CAPITAL PARTNERS LIMITED", "BG North America (F.K.A. British Gas North America)", "Northrop Grumman Corp", "RURAL COMMUNITY DEVELOPMENT CONSULTANTS", "Coalition for Donor State Equity", "MAXIM INFORMATION TECHNOLOGY SDN. BHD.", "NATIONAL COTTON COUNCIL", "NATIONAL ATHLETIC TRAINERS ASS", "MORTGAGE INSURANCE COMPANIES OF AMERICA", "SHAWNEE TRIBE", "MUTUAL OF OMAHA INC", "US GLOBAL LEADERSHIP CAMPAINGN", "VOLUNTEERS OF AMERICA", "OCEAN CHAMPIONS", "BALL AEROSPACE & TECHNOLOGIES CORP", "DESIGN BUILD INSTITUTE OF AMERICA", "STIRLING ENERGY SYSTEMS LIMITED", "INTERNATIONAL MYELOMA FOUNDATION", "HP Inc", "Cincinnati Financial Corp", "U.S. Chamber of Commerce - Center for Capital Markets Competitiveness", "LOVELACE RESPIRATORY RESEARCH INSTITUTE", "VISITING NURSES FOUNDATION INC", "OWNER-OPERATOR INDEPENDENT DRIVERS ASSOCIATION", "Volkswagen AG, Wolfsburg", "TEXAS A & M UNIVERSITY SYSTEM", "Rent-A-Center Inc", "BERKSHIRE HATHAWAY ENERGY CO", "AMERICAN CHEMISTRY COUNCIL INC", "UTAH TRANSIT AUTHORITY", "MARQUETTE UNIVERSITY", "Alkermes Plc", "Bank of New York Mellon Corp (The)", "Burlington Northern Santa Fe LLC", "OAKTREE CAPITAL MANAGEMENT L P", "Protective Life Corp", "AMERICAN ACADEMY OF DERMATOLOGY INC", "Temple-Inland Inc.", "MARS INC", "Ally Financial Inc", "Entegris Inc", "CORINTH HEALTH PARTNERS LLC", "Principal Financial Group Inc.", "AmerisourceBergen Corp", "COMMUNITY FINANCIAL SERVICES ASSOCIATION", "Anheuser-Busch Companies Inc", null, "Amgen Inc", "AMERICAN DIABETES ASSOCIATION", "Con-Way Inc", "International Business Machines Corp", "AMERICAN INSURANCE ASSOCIATES", "MASSACHUSETTS INSTITUTE OF TECHNOLOGY INC", "ALLIED PILOTS ASSOCIATION", "AMERICAN CHEMISTRY COUNCIL INC", "SALTCHUK RESOURCES INC", "MAYO CLINIC", "YAKIMA BASIN STORAGE ALLIANCE", "Science Applications International Corp", "DOLORES WATER CONSERVANCY DISTRICT", "PUBLIC POWER COUNCIL", "Biogen Inc", "Simon Property Group Inc.", "Vanguard Health Systems Inc.", "EVANGELICAL LUTHERAN GOOD SAMARITAN SOCIETY", "Friends of the Global Fight Against AIDS, Tuberculosis and Malaria", "QTL BIOSYSTEMS LLC", "Con-Way Inc", "NATIONAL ASSOCIATION OF COMMUNITY HEALTH CENTERS", "Blue Source,  LLC", "IMPERIAL IRRIGATION DISTRICT", "MasterCard Inc", null, "Vertex Pharmaceuticals Inc", "DeVry Education Group Inc", null, "BLUE ORIGIN LLC", "COMPRESSED GAS ASSOCIATION INC", "TOWN OF QUEEN CREEK", "SMALL BUSINESS INVESTOR A", "Genentech Inc", "Heli Ski US/US - Heli Skiing Association", "AMERICAN HEALTH QUALITY ASSN", "Intelsat SA", "BREWSTER / JORY ASSOCIATES LLC", "HALLMARK CARDS INC", "INTERNATIONAL FACILITY MANAGEMENT ASSN", "Boy Scouts of America (Indian Nations Council)", "San Bernardino Associated Governments", "Airlines for America", "BATES UNIFORM FOOTWEAR", "American Capital Ltd", "BECHTEL NATIONAL INC", "PROPERTY CASUALTY INSURERS ASSOCIATION O", "Novartis AG", "Celgene Corp", "SOUTHWEST COUNCIL OF AGRIBUSINESS", "Franciscan Alliance (f/k/a Sisters of St. Franciscan Health Services)", "National Tobacco Company", "National Grid", "DMB ASSOCIATES INC", "UNDERWRITERS LABORATORIES INC", "MCNEIL CONSUMER HEALTHCARE", "Computer Sciences Corp", "NEUROFIBROMATOSIS INC MID ATLANTIC", "Glaxosmithkline PLC", "CONSORTIUM FOR WORKER EDUCATION INC", "TOWERS WATSON LIMITED", "American Superconductor Corp", "PORT OF LOS ANGELES", "HollyFrontier Corp", "BlackBerry Ltd", "Chemtura Corp", "SECURE DATA IN MOTION INC", "DigitalGlobe Inc", "AIRPORTS COUNCIL INTERNATIONAL -- NORTH AMERICA", "Cook Children's Health Care System", "BROTHERHOOD OF RAILROAD SIGNALMEN", "Oracle Corp", "BAE Systems Canada Inc", "ARKANSAS FARM BUREAU FEDERATION", "General Motors Co", null, "NATIONAL ASSOC PSYCHIATRIC", null, null, "CAMPAIGN FOR HOME ENERGY ASSISTANCE", "Koninklijke Philips NV", "Applied Biosystems Inc", "Intelsat SA", "AUTOMATION ALLEY", "AMERICANS FOR PROSPERITY", "AMERICAN FOREST & PAPER ASSOCIATION INC", "BUHLER QUALITY YARNS CORP", "MARION COUNTY, OHIO", "ASPHALT ROOFING MANUFACTURERS ASSOCIATION", "INTERNATIONAL CEMETERY & FUNERAL ASSOC", "National Utility Contractors Association", "SEAFREEZE LTD", "Lennox International Inc.", "DIGITAL MEDIA ASSOCIATION", "Marathon Petroleum Corp", "AFL-CIO", "iHeartMedia Inc", "AMERICAN MOSQUITO CONTROL", "Options Clearing Corporation", "NESTLE WATERS NORTH AMERICA INC", "FEDERAL BAR ASSOCIATION", "Molina Healthcare Inc.", "CLOVER PARK SCHOOL DISTRICT", "ASSOCIATION OF METROPOLITAN WATER AGENCY", "QUEST INTEGRATED INC", "WORLDATWORK", null, "QUALCOMM Inc.", "Target Corp", "AMERICAN ASSOCIATION FOR CLINICAL CHEMISTRY INC", "B C POLITICAL STRATEGIES INC", "Association for Molecular Pathology", "NATIONAL KIDNEY FOUNDATION INC", "AMERICAN APPAREL & FOOTWEAR ASSOCIATION", "ALUTIIQ MANAGEMENT SERVICES", "AIR TRANSPORT ASSOCIATION OF AMERICA INC", "ARGUS MEDIA INC", "Texas Instruments Inc", "MUSCULAR DYSTROPHY ASSOCIATION INC", "IOWA FARM BUREAU FEDERATION", "The Puerto Rico Equality Forum", "ALSTOM TRANSPORTATION INC", "CF Industries Holdings Inc", "Endo International plc", "DAIRYLEA COOPERATIVE INC", "Huntington Bancshares Inc", "POTOMAC STRATEGIC DEVELOPMENT CO LLC ON BEHALF OF LIONS CLUBS INTERNATIONAL", "NATIONAL IMMIGRATION FORUM", "AMERICAN GREYHOUND TRACK OPERATORS ASSOCIATION", "EMPRESAS FONALLEDAS", "AMERICAN COUNCIL OF LIFE INSURERS", "DaVita HealthCare Partners Inc", "TELECOMMUNICATIONS INDUSTRY ASSOCIATION", "FMC Corp.", "GREETING CARD ASSOCIATION", "HEALTHCARE ASSN OF NEW YORK STATE", "PG&E Corp", "Accenture PLC", "STICHTING INTERNATIONAL ASSOCIATION OF EMERGENCY MANAGERS-NEDERLAND", null, "Aetna Inc.", "Pfizer Inc", "SOUTHWEST AIRLINES PILOTS ASSOCIATION", "Z GEN", null, "SANTA CRUZ METROPOLITAN TRANSIT DISTRICT", "PORT OF HOOD RIVER", "NATIONAL CABLE & TELECOMMUNICATIONS ASSC", null, "AFTERSCHOOL ALLIANCE", "Calpine Corp", "RETAIL INDUSTRY LEADER ASSOCIATION INC T", "MORPHO TRUST USA INC", "PEOPLE FOR AMERICAN WAY", "Exxon Mobil Corp", "FIRST WIND ENERGY LLC", "Pfizer Inc", "FEDERATION OF AMERICAN HOSPITALS INC", "ASTELLAS PHARMA US LLC", "MBIA Inc.", "Exelis Inc", "Aetna Inc.", "Velocys PLC", "Lockheed Martin Corp", "BRIDGEPORT PORT AUTHORITY", "NATIONAL ELECTRICAL MANUFACTURERS ASSOCIATION", "PORT ST LUCIE", "St. Jude Medical Inc.", "NATIONAL ASSOCIATION OF BROADCASTERS", "Adobe Systems Inc", null, "ROMAX MANAGEMENT GROUP", "CCN AMERICA LP", "Travelers Companies Inc (The)", "Verizon Communications Inc", "Peabody Energy Corp", "Beam Inc", "BOEHRINGER INGELHEIM PHARMACEUTICALS INC", "KANSAS FARM BUREAU", "ALABAMA FARMERS FEDERATION", "Verizon Communications Inc", "EDP RENEWABLES NORTH AMERICA LLC", "PERLES LAW FIRM", "Electrochemical Oxygen Concepts, Inc. dba EO2 Concepts", "Endo International plc", "CTIA-THE WIRELESS ASSOCIATION", "TEXAS CLASSROOM TEACHERS ASSOCIATION", "INTERNATIONAL ASSOCIATION OF AIRPORT DUTY FREE STORES", "KOCH CO PUBLIC SECTOR", "OCEAN SPRAY CRANBERRIES INC", "Novartis AG", "Owens-Illinois Inc.", "PHARMACEUTICAL RESEARCH & MANUFACTURERS OF AMERICA", "AMERICAN MEDICAL ASSOCIATION", "Verizon Communications Inc", "Microsoft Corp", "NATIONAL ASSOCIATION OF CONSERVATION DIS", "ASSOCIATION OF AMERICAN RAILROADS", "NATIONAL AFFORDABLE HOUSING MANAGEMENT A", "Intuit Inc.", "FedEx Corp.", "AMERICAN ACADEMY OF DERMATOLOGY INC", "Herbalife Ltd", "COUNCIL ON SOCIAL WORK EDUCATION", "AMERICAN SHEEP INDUSTRY ASSOCIATION", "Caesars Entertainment Corp", "Marathon Oil Corp", "PHYSICIAN INSURERS ASSOCIATION OF AMERICAN", "EMERGISOFT CORP", "ENVIRONMENTAL TECHNOLOGY COUNCIL", "MASSACHUSETTS MEDICAL SOCIETY", "COALITION TO STOP GUN VIOLENCE", "EXPLO SP. Z O.O.", null, "MIAI DADE COUNTY SCHOOL BOA", "CITY OF ALBANY", "AMERICAN SOCIETY OF ADDICTION MEDICINE", "Verizon Communications Inc", "Clean Energy Fuels Corp", "Computer Sciences Corp", "CITY OF BERKELEY", "AMERICAN FOREST & PAPER ASSOCIATION INC", "PLANETARY RESOURCES INC", "ICKES AND ENRIGHT GROUP (OBO NEW YORK HALL OF SCIENCE)", "AMERICAN HEALTH CARE ASSOCIATION", "eBay Inc.", "AMERICAN ACADEMY OF PEDIATRIC DENTISTRY", "Glaxosmithkline PLC", "IRELAND CARROLL & KELLEY PC", "AMERICAN WIND ENERGY ASSOCIATION", "DIRECTV", "COMPUCREDIT CORP", "WageWorks Inc", "AMERICAN DIETETIC ASSOCIATION", "KANSAS CITY & MISSOURI", null, "KEYS FISHERIES MARKET & MARINA", "INVESTMENT COMPANY INSTITUTE", "NATIONAL HISPANIC MEDICAL ASSOCIATION", "AIRTRAN AIRWAYS", "eBay Inc.", "UNITED STATES HISPANIC CHAMBER OF COMMER", "PENSION REFORM ACTION COMMITTEE", "American Airlines Group Inc", "BP PLC", "MILLIKEN & CO", "CHILDRENS HOSPITAL OF CHICAGO", "NATIONAL EXPRESS CORP", "NATIONAL RENDERERS ASSOCIATION INC", "EMD SERONO INC", "MOTOR & EQUIPMENT MANUFACTURER ASSOCIATION", null, "SUPERVALU INC.", "Unilever NV", "MISSOURI HOSPITAL ASSOCIATION", "CITY & BOROUGH OF JUNEAU", "DEPARTMENT FOR PROFESSIONAL EMPLOYEES AF", "Southern Co (The)", "Lockheed Martin Corp", "COALITION TO PROMOTE U S AGRICULTURAL EXPORTS", "DCI LLC", "UNIVERSITY OF ILLINOIS", "NJ ASSOCIATION OF SHARED AIRCRAFT PILOTS", "GREATER NEW ORLEANS INC", "NATIONAL KIDNEY FOUNDATION INC", "ITT Educational Services Inc", "SOCIETY OF THE PLASTICS INDUSTRY INC", "JEWISH FEDERATION OF METROPOLITAN CHICAGO (JFMC)", "eHealth Inc", "MADISON METROPOLITAN SEWERAGE DISTRICT", "MAGAZINE PUBLISHERS OF AMERICA", "Network Ltd", "ERNST & YOUNG LLP", "BioCryst Pharmaceuticals Inc", "COLLEGE SAVINGS FOUNDATION", "Reckitt Benckiser Group PLC", "NATIONAL RETAIL FEDERATION", "CENTRAL UTAH WATER CONSERVANCY DISTRICT", "Wal-Mart Stores Inc", "CBS Corp", "ACTION NOW INC", "CITY OF PUEBLO CO", "NOBLIS INC", "UMG RECORDINGS INC", null, "AMERICAN BENEFITS COUNCIL", "MICHIGAN MANUFACTURING TECH CENTER", "INGLEWOOD-CA CITY OF", "Photocure ASA", "GENOA HEALTH CARE CONSULTING LLC", "SCANA Corp", "NATIONAL PORK PRODUCERS COUNCIL", null, "AMERICAN PHYSIOLOGICAL SOCIETY", "NATIONAL COMMITTEE TO PRESERVE SOCIAL SECURITY & MEDICARE", "NATIONAL ASSOCIATION OF CHAIN DRUG STORE", "ALABAMA COUSHATTA TRIBE OF TEXAS", "UNITED STATES PHARMACOPEIA BRASIL LTDA.", "Visa Inc", "Franciscan Alliance (f/k/a Sisters of St. Franciscan Health Services)", "Raytheon Co.", "AMERICAN CHEMISTRY COUNCIL INC", "Angel Capital Association", "AMERICAN ACADEMY OF ACTUARIES", "Eastman Kodak Co", "CALIFORNIA WHEAT COMMISSION", "CITY OF JACKSON MS PURCH", "NATIONAL RURAL ELECTRIC COOPERATIVE ASSOCIATION", "Deutsche Post AG", "Darden Restaurants Inc.", "Fidelity National Information Services Inc", null, "HUMAN RIGHTS FIRST INC", "MEGGITT DEFENSE SYSTEMS-CASWELL", null, "CITY OF JACKSON", "MARS INC", "Siemens AG", "INTERACTIVE ADVERTISING BUREAU", "AT&T Inc", "KLA-TENCOR MIE GMBH", null, "Land O'Lakes Inc.", "JOHN CRANE CANADA INC", "NOBLE BIOMATERIALS (FORMERLY NOBLE FIBER TECHNOLOGIES LLC)", "ASSOCIATION FOR ADVANCED LIFE UNDERWRITI", "ZETTACORE INC", "Fresenius Medical Care AG &Co KGAA", "Boeing Co", "Network Technology PLC", "Napa Valley Vine Trail Coalition", "AMERICAN SOCIETY OF CONSULTANT PHARMACIS", "iHeartMedia Inc", "COUNTY OF TULARE", "OH PUBLIC INTEREST RESEARCH GROUP", "NiSource Inc.", "SOCIETY FOR WORLDWIDE INTERBANK FINANCIAL TELECOMMUNICATION", "GWINNETT COUNTY GOVERNMENT", "Raytheon Co.", "BISMARCK STATE COLLEGE", "WINNING STRATIGIES WASHINGTON", "MILITIA MEMBER SERVICES", "MTS TECHNOLOGIES INC", "Missouri Coalition for Historic Preservation and Economic Development", "AMERICAN SOCIETY OF TROPICAL MEDICINE & HYGIENE", "PACIFIC SCIENCE CENTER", "3M Co", "ACT FOR AMERICA", "Conocophillips", "Plum Creek Timber Co Inc.", "PHRMA", "KURION INC", "AMERICAN ASSOCIATION FOR JUSTICE", "Hunter Douglas NV", "PEABODY INVESTMENT CORP", "ADVOCATES FOR HIGHWAY & AUTO SAFETY", "Broadcom Corp", "SOLARA HOLDINGS LIMITED", "STREAMLINED SALES TAX GOVERNING BOAR", "TRI-STATE GENERATION AND TRANSMISSION ASSOCIATION INC", "AMERICAN COUNCIL ON EDUCATION", "NATIONAL ASSOCIATION OF FOSTER GRANDPARENT PROGRAM DIRECTORS", "American Arts Alliance dba Performing Arts Alliance", "Pinnacle West Capital Corp", "NEW NAME CLUB", "Vanguard", "NATIONAL COUNCIL FOR IMPACTED SCHOOLS", "SWIFT INC", "SHEE ATIKA INC", "HEARTH PATIO & BARBECUE ASSOCIATES", "NATIONAL SOCIETY OF PROFESSIONAL ENGINEERS", "GoDaddy Inc", "NATIONAL ASSOCIATION OF LETTER CARRIERS", null, "MERIDIAN HEALTH INC", "AMERICAN OCCUPATIONAL THERAPY ASSOCIATION", "Intel Corp", "LANDMARK MEDICAL CENTER INC", "CUSTOM BROKERS & FORWARDERS ASSOCIATION", null, "AGRIBANK, FCB", "CHILDREN'S HOSPITALS ASSOCIATION FKA-NATIONAL ASSOCIATION OF CHILDREN'S HOSPITA", "AMADOR COUNTY", "CITY OF KEY WEST", "iHeartMedia Inc", "National Religious Campaign Against Torture Action Fund", "OTSUKA AMERICA PHARMACEUTICAL INC", "MEDICAL CONTINUING EDUCATION", "PRIVATE EQUITY GROWTH CAPITAL COUNCIL", "QUEST RELIABILITY", "Capitol Counsel on behalf of Westfield", "BLUE CROSS & BLUE SHIELD ASSOCIATION", "MOTION PICTURE ASSOCIATION OF AMERICA", "NATIONAL COUNCIL OF LA RAZA", "THURGOOD MARSHALL COLLEGE FUND", "NATIONAL COTTON COUNCIL", "UNIVERSITY OF CONNECTICUT", null, "Pearson PLC", "REAL ESTATE ROUNDTABLE", "Cardinal Health Inc"]}],
                         {"barmode": "overlay", "legend": {"bgcolor": "#F5F6F9", "font": {"color": "#4D5663"}}, "paper_bgcolor": "#F5F6F9", "plot_bgcolor": "#F5F6F9", "title": {"font": {"color": "#4D5663"}, "text": "Count of of Clients"}, "xaxis": {"gridcolor": "#E1E5ED", "showgrid": true, "tickfont": {"color": "#4D5663"}, "title": {"font": {"color": "#4D5663"}, "text": "Clients"}, "zerolinecolor": "#E1E5ED"}, "yaxis": {"gridcolor": "#E1E5ED", "showgrid": true, "tickfont": {"color": "#4D5663"}, "title": {"font": {"color": "#4D5663"}, "text": "count"}, "zerolinecolor": "#E1E5ED"}},
                         {"showLink": true, "linkText": "Export to plot.ly", "plotlyServerURL": "https://plot.ly", "responsive": true}
                     ).then(function(){
                             
-var gd = document.getElementById('2b11f417-7b41-4167-9395-eb4aec5ae364');
+var gd = document.getElementById('97f7102d-6dd9-4c60-94cf-312fcfc2d18a');
 var x = new MutationObserver(function (mutations, observer) {{
         var display = window.getComputedStyle(gd).display;
         if (!display || display === 'none') {{
@@ -13436,7 +14114,7 @@ if (outputEl) {{
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[50]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">dfviz</span><span class="p">[</span><span class="s1">&#39;registrant&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iplot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;hist&#39;</span><span class="p">,</span> <span class="n">xTitle</span><span class="o">=</span><span class="s1">&#39;Registrants&#39;</span><span class="p">,</span>
@@ -13461,21 +14139,21 @@ if (outputEl) {{
 <div>
         
         
-            <div id="8e7052aa-632b-417b-981d-9d27992379ad" class="plotly-graph-div" style="height:525px; width:100%;"></div>
+            <div id="fb74e459-0b20-48ca-91b3-4f3ebb132025" class="plotly-graph-div" style="height:525px; width:100%;"></div>
             <script type="text/javascript">
                 require(["plotly"], function(Plotly) {
                     window.PLOTLYENV=window.PLOTLYENV || {};
                     window.PLOTLYENV.BASE_URL='https://plot.ly';
                     
-                if (document.getElementById("8e7052aa-632b-417b-981d-9d27992379ad")) {
+                if (document.getElementById("fb74e459-0b20-48ca-91b3-4f3ebb132025")) {
                     Plotly.newPlot(
-                        '8e7052aa-632b-417b-981d-9d27992379ad',
-                        [{"histfunc": "count", "histnorm": "", "marker": {"color": "rgba(255, 153, 51, 1.0)", "line": {"color": "#4D5663", "width": 1.3}}, "name": "registrant", "opacity": 0.8, "orientation": "v", "type": "histogram", "uid": "68ca7089-f9e4-4d00-9582-7d96945c30d5", "x": ["NYU Hospitals Center", "Independent Electrical Contractors, Inc.", "The Smith-Free Group", "MILLIKEN & COMPANY", "Bartley O'Hara", "Cuneo Gilbert & LaDuca", "Bates Capitol Group, Inc.", "MASSACHUSETTS MEDICAL SOCIETY", "POLICY DIRECTIONS INC.", "RICHARD F. HOHLT", "Transport Workers Union of America, AFL-CIO", "INTERNATIONAL SAFETY EQUIPMENT ASSOCIATION", "Ray Billups", "ALPINE GROUP, INC.", "Crossroads Strategies, LLC", "Dow Lohnes PLLC", "Van Scoyoc Associates", "Mental Health America", "Panuzio & Giordano", "CG Technologies Inc.", "Edmund Graber", "DTS Solutions LLC", "The Hamm Consulting Group, LLC", "Polsinelli PC (FKA Polsinelli Shughart PC)", "Deere & Company", "Federal Science Partners LLC", "DMM Strategies", "CapCity Advocates, LLC", "HECHT SPENCER & ASSOCIATES, INC.", "Raffaniello & Associates", "CAVAROCCHI RUSCIO DENNIS ASSOCIATES, L.L.C.", "Husch Blackwell, LLP", "Cassidy & Associates, Inc. (formerly known as Cassidy & Associates)", "National Park Foundation", "CENTER FOR SCIENCE IN THE PUBLIC INTEREST", "Sonosky, Chambers, Sachse, Endreson & Perry, LLP", "American Tower Corporation", "CAVAROCCHI RUSCIO DENNIS ASSOCIATES, L.L.C.", "Water Strategies, LLC", "GEOFFREY P. GRAY", "BOCKORNY GROUP, INC.", "Brown Rudnick LLP", "HSBC-North America", "SOUTHERN ENVIRONMENTAL LAW CENTER", "HOSPITAL SERVICE ASSOCIATION OF NORTHEASTERN PENNSYLVANIA", "Van Scoyoc Associates", "Van Scoyoc Associates", "The Smith-Free Group", "LEADINGAGE (FKA AMER. ASSOC. OF HOMES AND SERVICES FOR THE AGING)", "3M COMPANY", "International Brotherhood of Teamsters", "PACE, LLP (Formerly PACE-CAPSTONE)", "Energy Alternatives for the 21st Century", "Ms. Missy Branson", "American Nurses Association", "K&L GATES LLP", "MEHLMAN CASTAGNETTI ROSEN BINGEL & THOMAS, INC.", "Sorini, Samet, & Associates, LLC", "Mr. Donald Kaniewski", "Van Scoyoc Associates", "The Keelen Group, LLC", "Tarplin, Downs & Young, LLC", "The Charles Schwab Corporation", "Lussier, Gregor, Vienna & Associates", "Dunlap & Browder, Inc.", "NAIOP", "C2 GROUP, LLC", "Mercury", "HOLLAND & KNIGHT LLP", "Alcalde & Fay", "Nelson, Mullins, Riley & Scarborough", "The Normandy Group, LLC", "ZELIFF ENTERPRISES", "Blue Origin, LLC", "Daryl Owen Associates, Inc", "The Baptista Group", "Mercury Strategies, LLC", "EDISON ELECTRIC INSTITUTE", "TROUTMAN SANDERS PUBLIC AFFAIRS GROUP, LLC", "DRINKER BIDDLE & REATH LLP", "Jones Walker, LLP", "Eris Group (formerly known as Bartlett & Bendall)", "Baker & McKenzie, LLP", "BLUE CROSS AND BLUE SHIELD ASSOCIATION", "Total System Services, Inc.", "U.S. Apple Association", "Franklin Square Group, LLC", "Alcalde & Fay", "TECO ENERGY, INC.", "MCAFEE, INC.", "The Wessel Group Incorporated", "Van Scoyoc Associates", "Holland & Hart LLP", "O'Brien, Gentry & Scott, LLC", "PRASAM", "Heather Podesta + Partners, LLC", "NVG, LLC", "Corporation for Enterprise Development", "LEVINSON & ASSOCIATES", "The Smith-Free Group", "Farragut Partners LLP", "Parsons Brinckerhoff, Inc.", "NATIONWIDE CHILDREN'S HOSPITAL, INC.", "East End Group", "Squire Patton Boggs", "Foley & Lardner LLP", "Capitol Counsel LLC", "YUM! BRANDS, INC.", "Capitol Legislative Strategies LLC", "Capitol Legislative Strategies LLC", "MEADWESTVACO CORPORATION", "Noble Strategies", "XCEL ENERGY, INC", "OBADAL, FILLER, MACLEOD & KLEIN, P.L.C.", "Chamber of Commerce of the U.S.A.", "SRG & Associates", "TCH Group, LLC", "C2 GROUP, LLC", "PutalaStrategies", "Andrew Cochran", "Ayres Law Group LLP", "GEORGETOWN UNIVERSITY", "Porter Wright Morris & Arthur LLP", "Bradley Arant Boult Cummings LLP", "The Duberstein Group Inc.", "Polsinelli PC (FKA Polsinelli Shughart PC)", "EXPERIAN NORTH AMERICA", "The Wessel Group Incorporated", "CHAMBERS, CONLON & HARTWELL, LLC", "The Charles Schwab Corporation", "Marsh & McLennan Companies, Inc.", "Capitol Tax Partners, LLP", "SC Partners LLC", "Roberti Global (fka Roberti White, LLC)", "C2 GROUP, LLC", "Arnold & Porter LLP", "Capitol Tax Partners, LLP", "WASHINGTON PARTNERS, LLC", "Brown Rudnick LLP", "HALEY & ASSOCIATES", "ULMAN PUBLIC POLICY & FEDERAL RELATIONS", "Heather Podesta + Partners, LLC", "Scholastic Inc.", "Van Scoyoc Associates", "HOLLAND & KNIGHT LLP", "CAVAROCCHI RUSCIO DENNIS ASSOCIATES, L.L.C.", "Environment America, Inc.", "BAKER DONELSON BEARMAN CALDWELL & BERKOWITZ", "Dickstein Shapiro LLP", "Generic Pharmaceutical Association", "Arent Fox LLP", "HOLLAND & KNIGHT LLP", "The Russell Group, Inc.", "NVG, LLC", "Venable LLP", "MEHLMAN CASTAGNETTI ROSEN BINGEL & THOMAS, INC.", "The Smith-Free Group", "ALPINE GROUP, INC.", "The Outlaw Group", "Norris, Tysse, Lampley & Lakis, LLP  FKA McGuiness Norris & Williams, LLP", "Peck Madigan Jones", "Sonosky, Chambers, Sachse, Endreson & Perry, LLP", "Ogilvy Government Relations", "Winston & Strawn LLP", "AMERICAN CABLE ASSOCIATION, INC.", "DEAN FOODS COMPANY", "National Employment Lawyers Association (NELA)", "ProEnglish, a project of U.S. Inc.", "Interactive Advertising Bureau", "ASSOCIATION OF NATIONAL ADVERTISERS, INC.", "ALPINE GROUP, INC.", "McBee Strategic Consulting, LLC", "BKSH & Associates", "ZELIFF ENTERPRISES", "Morgan Meguire, LLC", "Bates Capitol Group, Inc.", "Law Offices of Kevin G. Curtin", "BRICKFIELD, BURCHETTE, RITTS & STONE, P.C.", "BROWNSTEIN HYATT FARBER SCHRECK, LLP", "Mary E. Shields Government Relations, LLC", "Kountoupes Denham Carr & Reid, LLC", "WINE AND SPIRITS WHOLESALERS OF AMERICA, INC", "Covidien Inc.", "Bingham McCutchen LLP", "Lutheran Immigration and Refugee Service", "SIEMENS  CORPORATION", "The Advocacy Group", "Lugar Hellmann Group", "CHAMBERS, CONLON & HARTWELL, LLC", "Integrated Solutions Group", "AMERICA'S HEALTH INSURANCE PLANS, INC. (AHIP)", "The Nickles Group, LLC", "Forbes-Tate", "Thorp Reed & Armstrong, LLP", "Financial Accounting Foundation", "CAPITOL HEALTH GROUP, LLC", "BKSH & Associates", "Lincoln Policy Group", "ALPINE GROUP, INC.", "Confrere Strategies, LLC", "Balch & Bingham, LLP", "National Grain and Feed Association", "Foley & Lardner LLP", "AKIN GUMP STRAUSS HAUER & FELD", "The Normandy Group, LLC", "Oldaker Law Group, LLP", "ELECTRIC DRIVE TRANSPORTATION ASSOCIATION", "Nelson, Mullins, Riley & Scarborough", "Forbes-Tate", "Van Scoyoc Associates", "Margaret Mathna", "McKenna, Long & Aldridge", "AMERICAN ASSOCIATION FOR GERIATRIC PSYCHIATRY", "HUMANE SOCIETY OF THE U S", "BOCKORNY GROUP, INC.", "Citizens for Responsibility and Ethics in Washington", "CHILD WELFARE LEAGUE OF AMERICA", "THE LIVINGSTON GROUP, L.L.C.", "Squire Patton Boggs", "EMERSON", "Ogilvy Government Relations", "Rich Feuer Anderson", "Abigail Stork", "Van Scoyoc Associates", "Nathanson+Hauck", "INTERNATIONAL CODE COUNCIL (ICC)", "Capitol Hill Strategies,  LLC", "HYJEK & FIX, INC.", "Kogovsek & Associates, Inc.", "Combest, Sell & Associates, LLC", "PODESTA GROUP, INC.", "K&L GATES LLP", "GENZYME CORPORATION", "ALSTON & BIRD, LLP", "AMERICAN THORACIC SOCIETY", "Camille Bonta", "Van Scoyoc Associates", "Transportation Intermediaries Association", "United Food & Commercial Workers International Union", "Jones Walker, LLP", "King & Spalding LLP", "Ryan MacKinnon Vasapoli and Berzok, LLP", "C & C CONSULTING", "The Nickles Group, LLC", "AMERICAN BUS ASSOCIATION", "Institute of Makers of Explosives", "VAN NESS FELDMAN, LLP", "The Gibson Group, LLC", "Panuzio & Giordano", "Bridgestone Americas Inc.", "MARCUS G. FAUST, PC", "ALPINE GROUP, INC.", "ALLIANCE OF AUTOMOBILE MANUFACTURERS", "K&L GATES LLP", "David Leach", "Mr. Galen Reser", "The Raben Group", "H. M. RILEY ASSOCIATES, LLC", "MetLife Group, Inc.", "NVG, LLC", "ALPINE GROUP, INC.", "Kadesh & Associates, LLC", "Robert A. Rapoza Associates", "ALPINE GROUP, INC.", "Winston & Strawn LLP", "National Cotton Council", "National Athletic Trainers' Association", "Hogan Lovells US LLP", "Hall Estill Hardwick Gable Golden & Nelson", "Fierce, Isakowitz & Blalock", "U.S. GLOBAL LEADERSHIP CAMPAIGN", "Squire Patton Boggs", "Ocean Champions", "Ball Corporation (including Ball Aerospace & Technologies Corp.)", "Design-Build Institute of America", "SC Partners LLC", "Murphy Consulting LLC", "INNOVATIVE FEDERAL STRATEGIES, LLC", "CINCINNATI FINANCIAL CORPORATION", "Peck Madigan Jones", "Cassidy & Associates, Inc. (formerly known as Cassidy & Associates)", "The Normandy Group, LLC", "Summit Strategies Government Affairs", "Volkswagen Group of America, Inc.", "Van Scoyoc Associates", "Capitol Counsel LLC", "BERKSHIRE HATHAWAY ENERGY (formerly MidAmerican Energy Holdings Company)", "American Chemistry Council", "Mr. James C. Barker", "MARQUETTE UNIVERSITY", "Capitol Decisions, Inc.", "The Smith-Free Group", "BNSF RAILWAY COMPANY", "Skadden, Arps, Slate, Meagher & Flom, LLP", "SONNENSCHEIN NATH & ROSENTHAL LLP", "Capitol Counsel LLC", "TEMPLE-INLAND INC.", "Squire Patton Boggs", "Capitol Hill Strategies,  LLC", "Squire Patton Boggs", "C2 GROUP, LLC", "Principal Financial Group", "Walter Consulting", "Sheffield Brothers", "Noble Strategies", "Tarplin, Downs & Young, LLC", "East End Group, LLC", "AMERICAN DIABETES ASSOCIATION", "CON-WAY INC (FORMERLY KNOWN AS CNF INC)", "Kamins Consulting", "Peck Madigan Jones", "Massachusetts Institute of Technology", "ALLIED PILOTS ASSOCIATION", "Ogilvy Government Relations", "Saltchuk Resources, Inc.", "McDermott Will & Emery LLP", "Cassidy & Associates, Inc. (formerly known as Cassidy & Associates)", "JOHN G. CAMPBELL, INC.", "Kogovsek & Associates, Inc.", "Kanner & Associates, LLC", "BIOGEN, IDEC", "BROWNSTEIN HYATT FARBER SCHRECK, LLP", "CAPITOL HEALTH GROUP, LLC", "BOCKORNY GROUP, INC.", "Friends of the Global Fight Against AIDS, Tuberculosis and Malaria", "THE PMA GROUP", "Venable LLP", "Van Scoyoc Associates", "Andrews Kurth LLP", "The Ferguson Group, LLC", "Nossaman LLP (Formerly Nossaman LLP/O'Connor & Hannan)", "HOLLAND & KNIGHT LLP", "Stanton Park Group", "William A. Blakey & Associates", "ALPINE GROUP, INC.", "K&L GATES LLP", "Compressed Gas Association, Inc.", "Van Scoyoc Associates", "The Advocacy Group", "Sidley Austin LLP", "Dutko Worldwide, LLC d/b/a Grayling", "Capitol Hill Strategies, LLC", "Wiley Rein LLP", "Rock & Associates", "Hallmark Cards, Inc", "PACE, LLP (Formerly PACE-CAPSTONE)", "Birch, Horton, Bittner & Cherot", "Van Scoyoc Associates", "Crossroads Strategies, LLC", "ADS Ventures, Inc.", "FOLEY HOAG LLP", "BECHTEL NATIONAL, INC", "PROPERTY CASUALTY INSURERS ASSOCIATION OF AMERICA", "NOVARTIS", "CELGENE CORPORATION", "Combest, Sell & Associates, LLC", "The Cormac Group, LLC", "S-3 Group (FKA Shockey Scofield Solutions)", "Dow Lohnes Government Strategies LLC", "HOLLAND & KNIGHT LLP", "UNDERWRITERS LABORATORIES INC.", "FOLEY HOAG LLP", "JOHN G. CAMPBELL, INC.", "Van Scoyoc Associates", "FOLEY HOAG LLP", "THE ICKES AND ENRIGHT GROUP, INC.", "Davis & Harman LLP", "Cassidy & Associates, Inc. (formerly known as Cassidy & Associates)", "Alcalde & Fay", "HollyFrontier Corporation", "CGCN GROUP, LLC (formerly known as Clark Geduldig Cranford & Nielsen, LLC)", "The Mattingley Group", "JK3 ASSOCIATES", "DigitalGlobe, Inc.", "AIRPORTS COUNCIL INTERNATIONAL -- NORTH AMERICA", "PRIME POLICY GROUP", "BROTHERHOOD OF RAILROAD SIGNALMEN", "Roberti Associates", "BAKER DONELSON BEARMAN CALDWELL & BERKOWITZ", "ARKANSAS FARM BUREAU FEDERATION", "General Motors Company", "Pickard Djinis and Pisarri LLP", "Capitol Decisions, Inc.", "Polsinelli PC", "Elevanta, LLC", "BRACY TUCKER BROWN & VALANZANO, INC.", "Philips Holding USA Inc.", "APPLIED BIOSYSTEMS", "Wiley Rein LLP", "K&L GATES LLP", "Americans for Prosperity", "Fierce, Isakowitz & Blalock", "Williams and Jensen, PLLC", "CFM STRATEGIC COMMUNICATIONS (CONKLING FISKUM & MCCORMICK)", "The Brightup Group LLC", "Nossaman LLP (Formerly Nossaman LLP/O'Connor & Hannan)", "National Utility Contractors Association", "Robertson, Monagle, & Eastaugh PC (formelry known at Hoffman, Silver, Gilman and", "Missy Edwards Strategies, LLC", "DIGITAL MEDIA ASSN", "MARATHON PETROLEUM CORPORATION", "AFL-CIO", "POLARIS GOVERNMENT RELATIONS, LLC", "McDermott Will & Emery LLP", "Forbes-Tate", "ML STRATEGIES, LLC", "Mr. Bruce Moyer", "Molina Healthcare, Inc.", "Evergreen Associates, LTD.", "Association of Metropolitan Water Agencies", "Strategic Marketing Innovations", "WorldatWork", "PODESTA GROUP, INC.", "QUALCOMM, INCORPORATED", "FLACK ASSOCIATES, LLC", "AMERICAN ASSOCIATION FOR CLINICAL CHEMISTRY", "Becker & Poliakoff, P.A.", "HealthFutures, LLC", "MHC Health Strategies", "American Apparel & Footwear Association", "BLANK ROME GOVERNMENT RELATIONS", "Air Transport Association of America, Inc.(d/b/a Airlines for America)", "Argus Media, Inc.", "MEHLMAN CASTAGNETTI ROSEN BINGEL & THOMAS, INC.", "Muscular Dystrophy Association, Inc.", "Iowa Farm Bureau Federation", "AKIN GUMP STRAUSS HAUER & FELD", "ALSTOM Inc.", "CF Industries, Inc.", "Endo Pharmaceuticals Inc.", "Gray & Oscar, LLC (formerly Bob Gray, LLC)", "HUNTINGTON BANCSHARES INCORPORATED", "Mr. Jackson DeWitt", "Navigators Global LLC (Formerly DC Navigators, LLC)", "Dickstein Shapiro LLP", "AKIN GUMP STRAUSS HAUER & FELD", "American Council of Life Insurers", "Van Heuvelen Strategies, LLC", "Telecommunications Industry Association", "Holland & Hart LLP", "Morrissey Strategic Partners, LLC", "Downey McGrath Group, Inc.", "Dickstein Shapiro LLP", "Etherton and Associates, Inc.", "MARTHA BRADDOCK", "CENTER FOR BIOLOGICAL DIVERSITY", "Avenue Solutions", "Ogilvy Government Relations", "The Keelen Group, LLC", "ML STRATEGIES, LLC", "Dell Technologies, Inc.", "CapitalEdge Advocacy Inc. (formerly CapitalEdge Advocacy, LLC)", "Summit Strategies Government Affairs LLC", "The Normandy Group, LLC", "Mr. Emery Simon", "WASHINGTON PARTNERS, LLC", "CALPINE CORPORATION", "Mehlman Castagnetti Rosen & Thomas, Inc.", "MorphoTrust USA", "PEOPLE FOR THE AMERICAN WAY", "The Nickles Group, LLC", "BROWNSTEIN HYATT FARBER SCHRECK, LLP", "Tarplin, Downs & Young, LLC", "Elmendorf Ryan", "The McManus Group, DBA Antimicrobial Innovation Alliance", "Ogilvy Government Relations", "J.A. Green and Company (formerly LLC)", "Avenue Solutions", "INNOVATIVE FEDERAL STRATEGIES, LLC", "Public Strategies Washington, Inc.", "Panuzio & Giordano", "ALSTON & BIRD, LLP", "The Cormac Group, LLC", "St. Jude Medical, Inc.", "Brooks, Pierce, McLendon, Humphrey & Leonard, L.L.P.", "Dutko Worldwide, LLC d/b/a Grayling", "The Nickles Group, LLC", "Van Scoyoc Associates", "K&L GATES LLP", "Avenue Solutions", "Elmendorf Ryan", "Dickstein Shapiro LLP", "Beam Suntory Inc.(f/k/a Beam Inc.)", "BOEHRINGER INGELHEIM PHARMACEUTICALS, INC.", "KANSAS FARM BUREAU", "Alabama Farmers Federation", "Mercury Strategies, LLC", "Capitol Tax Partners, LLP", "Andrew Cochran", "Wells Health Group", "Capitol Hill Consulting Group", "MINTZ LEVIN COHN FERRIS GLOVSKY AND POPEO, P.C.", "Van Scoyoc Associates", "Kent & O'Connor, Inc.", "Palmetto Group", "Cassidy & Associates, Inc. (formerly known as Cassidy & Associates)", "WINNING STRATEGIES WASHINGTON", "OWENS-ILLINOIS, INC", "Walker, Martin & Hatch, LLC", "The McManus Group", "Ogilvy Government Relations", "American Continental Group", "National Association of Conservation Districts", "Wilmer Cutler Pickering Hale and Dorr LLP", "NATIONAL AFFORDABLE HOUSING MANAGEMENT ASSOCIATION (NAHMA)", "Dickstein Shapiro LLP", "Van Scoyoc Associates", "Capitol Counsel LLC", "Downey McGrath Group, Inc.", "LEWIS-BURKE ASSOCIATES, LLC", "American Horticulture Industry Association", "BGR Government Affairs", "MARATHON OIL CORPORATION", "Physician Insurers Association of America", "Van Scoyoc Associates", "Environmental Technology Council", "MASSACHUSETTS MEDICAL SOCIETY", "THE COALITION TO STOP GUN VIOLENCE", "HYJEK & FIX, INC.", "The OB-C Group. LLC", "Alcalde & Fay", "MWW Group", "Capitol Decisions, Inc.", "Westner Associates", "North Bridge Communications, Inc.", "Etherton and Associates, Inc.", "Townsend Public Affairs", "Fierce Government Relations", "K&L GATES LLP", "Peck Madigan Jones", "Capitol Counsel LLC", "Valerie Morse White Consulting", "Hogan Lovells US LLP", "Glaxosmithkline Inc.", "Mercury", "AMERICAN WIND ENERGY ASSOCIATION", "Harris, Wiltshire & Grannis LLP (f/k/a Wiltshire & Grannis LLP)", "CompuCredit Corporation", "Squire Patton Boggs", "Barnes & Thornburg LLP", "Polsinelli PC (FKA Polsinelli Shughart PC)", "WINNING STRATEGIES WASHINGTON", "Robertson, Monagle, & Eastaugh PC (formelry known at Hoffman, Silver, Gilman and", "Investment Company Institute", "National Hispanic Medical Association", "HURT, NORTON & ASSOCIATES, INC.", "C2 GROUP, LLC", "PODESTA GROUP, INC.", "VENN STRATEGIES, LLC", "The Normandy Group, LLC", "BP AMERICA, INC", "SRG & Associates", "HOLLAND & KNIGHT LLP", "Heartland Solutions Group, Inc.", "POLICY DIRECTIONS INC.", "PODESTA GROUP, INC.", "Arent Fox LLP", "Crossroads Strategies, LLC", "The Duberstein Group Inc.", "UNILEVER UNITED STATES, INC.", "BE Consulting", "CHAMBERS, CONLON & HARTWELL, LLC", "GILDEA, MICHAEL W", "Heather Podesta + Partners, LLC", "LOCKHEED MARTIN CORPORATION", "JAY HOWELL & ASSOCIATES", "Mr. Jon Christensen", "UNIVERSITY OF ILLINOIS", "NetJets Association of Shared Aircraft Pilots", "THE LIVINGSTON GROUP, L.L.C.", "Health and Medicine Counsel of Washington", "Dickstein Shapiro LLP", "The Society of the Plastics Industry, Inc.", "JEWISH FEDERATION OF METROPOLITAN CHICAGO (JFMC)", "CAVAROCCHI RUSCIO DENNIS ASSOCIATES, L.L.C.", "Broydrick & Associates", "MAGAZINE PUBLISHERS OF AMERICA", "NETWORK", "Ernst & Young LLP (Washington Council Ernst & Young)", "BAY BRIDGE STRATEGIES, INC.", "Davis & Harman LLP", "POLICY DIRECTIONS INC.", "National Retail Federation", "MARCUS G. FAUST, PC", "WAL-MART STORES, INC", "VIACOM INTERNATIONAL SERVICES, INC.", "CARE Action Now, Inc.", "Kogovsek & Associates, Inc.", "Alcalde & Fay", "BOCKORNY GROUP, INC.", "Ridge Policy Group", "Groom Law Group, Chartered", "K&L GATES LLP", "The Ferguson Group, LLC", "King & Spalding LLP", "Heather Podesta + Partners, LLC", "TCH Group, LLC", "BOCKORNY GROUP, INC.", "ALSTON & BIRD LLP", "The American Physiological Society", "National Committee to Preserve Social Security and Medicare", "NATIONAL ASSOCIATION OF CHAIN DRUG STORES", "PARRY, ROMANI, DECONCINI & SYMMS", "The United States Pharmacopeial Convention", "Mr. Jonathan Band", "The Cormac Group, LLC", "Raytheon Company", "BOCKORNY GROUP, INC.", "APCO Worldwide Inc.", "American Academy of Actuaries", "EASTMAN KODAK COMPANY", "HALEY & ASSOCIATES", "Winston & Strawn LLP", "Davis & Harman LLP", "DEUTSCHE POST WORLD NET - USA, INC", "Trammell and Company", "ALSTON & BIRD, LLP", "SCULLY ROSKEY AND MISSMAR", "Human Rights First", "HURT, NORTON & ASSOCIATES, INC.", "38 North Solutions, LLC", "Bradley Arant Boult Cummings LLP", "Mars, Incorporated", "SIEMENS  CORPORATION", "Venable LLP", "Quinn Gillespie & Associates", "McAllister & Quinn, LLC", "MWW Group", "Mercury", "SULLIVAN & CROMWELL LLP", "THE PMA GROUP", "Arnold & Porter LLP", "K&L GATES LLP", "ALSTON & BIRD, LLP", "McBee Strategic Consulting, LLC", "TECHNOLOGY NETWORK AKA TECHNET", "Venable LLP", "American Society of Consultant Pharmacists", "O'NEILL, ATHY & CASEY, P.C.", "CARPI & CLAY, INC.", "U.S. Public Interest Research Group", "NISOURCE, INC", "CLEARY GOTTLIEB STEEN & HAMILTON LLP", "TROUTMAN SANDERS PUBLIC AFFAIRS GROUP, LLC", "Capitol Tax Partners, LLP", "Greystone Group LLC", "PODESTA GROUP, INC.", "McBee Strategic Consulting, LLC", "THE PMA GROUP", "Hogan Lovells US LLP", "DRINKER BIDDLE & REATH LLP", "Denny Miller Associates", "Hecht Latham Spencer & Associates, Inc., formerly known as Hecht Spencer & Assoc", "ACT! for America", "ConocoPhillips", "PLUM CREEK TIMBER COMPANY, INC.", "Horizon Government Affairs", "K&L GATES LLP", "AMERICAN ASSOCIATION FOR JUSTICE", "AKIN GUMP STRAUSS HAUER & FELD", "PEABODY INVESTMENTS CORP.", "Advocates for Highway and Auto Safety", "Franklin Square Group, LLC", "Red Maple Consulting, LLC", "CGCN GROUP, LLC (formerly known as Clark Geduldig Cranford & Nielsen, LLC)", "TRI-STATE GENERATION AND TRANSMISSION ASSOCIATION, INC.", "AMERICAN COUNCIL ON EDUCATION", "Van Scoyoc Associates", "American Arts Alliance dba Performing Arts Alliance", "Capitol Tax Partners, LLP", "Sills Associates", "PORTERFIELD, LOWENTHAL, FETTIG & SEARS, LLC", "Capitol Decisions, Inc.", "Rich Feuer Anderson", "BLANK ROME GOVERNMENT RELATIONS", "Hearth, Patio & Barbecue Association", "National Society of Professional Engineers", "GO DADDY.COM", "National Association of Letter Carriers", "Van Ness Feldman, LLP", "MWW Group", "The American Occupational Therapy Association, Inc. (AOTA)", "The Washington Tax & Public Policy Group (formerly The Washington Tax Group)", "Capitol City Group, Ltd.", "Kent & O'Connor, Inc.", "MWW Group LLC", "AGRIBANK, FCB", "CGCN GROUP, LLC (formerly known as Clark Geduldig Cranford & Nielsen, LLC)", "ENS RESOURCES, INC.", "Alcalde & Fay", "David Leach", "National Religious Campaign Against Torture Action Fund", "Otsuka America Pharmaceutical, Inc.", "Thorn Run Partners", "Private Equity Growth Capital Council", "Strategic Marketing Innovations", "Missy Edwards Strategies, LLC", "Tarplin, Downs & Young, LLC", "The Fritts Group", "National Council of La Raza", "MWW Group", "National Cotton Council", "Van Scoyoc Associates", "FRANKLIN CREEK CONSULTING", "PEARSON EDUCATION (FKA Pearson , Inc)", "Capitol Counsel LLC", "Fierce, Isakowitz & Blalock"]}],
+                        'fb74e459-0b20-48ca-91b3-4f3ebb132025',
+                        [{"histfunc": "count", "histnorm": "", "marker": {"color": "rgba(255, 153, 51, 1.0)", "line": {"color": "#4D5663", "width": 1.3}}, "name": "registrant", "opacity": 0.8, "orientation": "v", "type": "histogram", "uid": "ce273902-81c0-4bf8-8017-8aebb3c9b6da", "x": ["NYU Hospitals Center", "Independent Electrical Contractors, Inc.", "The Smith-Free Group", "MILLIKEN & COMPANY", "Bartley O'Hara", "Cuneo Gilbert & LaDuca", "Bates Capitol Group, Inc.", "MASSACHUSETTS MEDICAL SOCIETY", "POLICY DIRECTIONS INC.", "RICHARD F. HOHLT", "Transport Workers Union of America, AFL-CIO", "INTERNATIONAL SAFETY EQUIPMENT ASSOCIATION", "Ray Billups", "ALPINE GROUP, INC.", "Crossroads Strategies, LLC", "Dow Lohnes PLLC", "Van Scoyoc Associates", "Mental Health America", "Panuzio & Giordano", "CG Technologies Inc.", "Edmund Graber", "DTS Solutions LLC", "The Hamm Consulting Group, LLC", "Polsinelli PC (FKA Polsinelli Shughart PC)", "Deere & Company", "Federal Science Partners LLC", "DMM Strategies", "CapCity Advocates, LLC", "HECHT SPENCER & ASSOCIATES, INC.", "Raffaniello & Associates", "CAVAROCCHI RUSCIO DENNIS ASSOCIATES, L.L.C.", "Husch Blackwell, LLP", "Cassidy & Associates, Inc. (formerly known as Cassidy & Associates)", "National Park Foundation", "CENTER FOR SCIENCE IN THE PUBLIC INTEREST", "Sonosky, Chambers, Sachse, Endreson & Perry, LLP", "American Tower Corporation", "CAVAROCCHI RUSCIO DENNIS ASSOCIATES, L.L.C.", "Water Strategies, LLC", "GEOFFREY P. GRAY", "BOCKORNY GROUP, INC.", "Brown Rudnick LLP", "HSBC-North America", "SOUTHERN ENVIRONMENTAL LAW CENTER", "HOSPITAL SERVICE ASSOCIATION OF NORTHEASTERN PENNSYLVANIA", "Van Scoyoc Associates", "Van Scoyoc Associates", "The Smith-Free Group", "LEADINGAGE (FKA AMER. ASSOC. OF HOMES AND SERVICES FOR THE AGING)", "3M COMPANY", "International Brotherhood of Teamsters", "PACE, LLP (Formerly PACE-CAPSTONE)", "Energy Alternatives for the 21st Century", "Ms. Missy Branson", "American Nurses Association", "K&L GATES LLP", "MEHLMAN CASTAGNETTI ROSEN BINGEL & THOMAS, INC.", "Sorini, Samet, & Associates, LLC", "Mr. Donald Kaniewski", "Van Scoyoc Associates", "The Keelen Group, LLC", "Tarplin, Downs & Young, LLC", "The Charles Schwab Corporation", "Lussier, Gregor, Vienna & Associates", "Dunlap & Browder, Inc.", "NAIOP", "C2 GROUP, LLC", "Mercury", "HOLLAND & KNIGHT LLP", "Alcalde & Fay", "Nelson, Mullins, Riley & Scarborough", "The Normandy Group, LLC", "ZELIFF ENTERPRISES", "Blue Origin, LLC", "Daryl Owen Associates, Inc", "The Baptista Group", "Mercury Strategies, LLC", "EDISON ELECTRIC INSTITUTE", "TROUTMAN SANDERS PUBLIC AFFAIRS GROUP, LLC", "DRINKER BIDDLE & REATH LLP", "Jones Walker, LLP", "Eris Group (formerly known as Bartlett & Bendall)", "Baker & McKenzie, LLP", "BLUE CROSS AND BLUE SHIELD ASSOCIATION", "Total System Services, Inc.", "U.S. Apple Association", "Franklin Square Group, LLC", "Alcalde & Fay", "TECO ENERGY, INC.", "MCAFEE, INC.", "The Wessel Group Incorporated", "Van Scoyoc Associates", "Holland & Hart LLP", "O'Brien, Gentry & Scott, LLC", "PRASAM", "Heather Podesta + Partners, LLC", "NVG, LLC", "Corporation for Enterprise Development", "LEVINSON & ASSOCIATES", "The Smith-Free Group", "Farragut Partners LLP", "Parsons Brinckerhoff, Inc.", "NATIONWIDE CHILDREN'S HOSPITAL, INC.", "East End Group", "Squire Patton Boggs", "Foley & Lardner LLP", "Capitol Counsel LLC", "YUM! BRANDS, INC.", "Capitol Legislative Strategies LLC", "Capitol Legislative Strategies LLC", "MEADWESTVACO CORPORATION", "Noble Strategies", "XCEL ENERGY, INC", "OBADAL, FILLER, MACLEOD & KLEIN, P.L.C.", "Chamber of Commerce of the U.S.A.", "SRG & Associates", "TCH Group, LLC", "C2 GROUP, LLC", "PutalaStrategies", "Andrew Cochran", "Ayres Law Group LLP", "GEORGETOWN UNIVERSITY", "Porter Wright Morris & Arthur LLP", "Bradley Arant Boult Cummings LLP", "The Duberstein Group Inc.", "Polsinelli PC (FKA Polsinelli Shughart PC)", "EXPERIAN NORTH AMERICA", "The Wessel Group Incorporated", "CHAMBERS, CONLON & HARTWELL, LLC", "The Charles Schwab Corporation", "Marsh & McLennan Companies, Inc.", "Capitol Tax Partners, LLP", "SC Partners LLC", "Roberti Global (fka Roberti White, LLC)", "C2 GROUP, LLC", "Arnold & Porter LLP", "Capitol Tax Partners, LLP", "WASHINGTON PARTNERS, LLC", "Brown Rudnick LLP", "HALEY & ASSOCIATES", "ULMAN PUBLIC POLICY & FEDERAL RELATIONS", "Heather Podesta + Partners, LLC", "Scholastic Inc.", "Van Scoyoc Associates", "HOLLAND & KNIGHT LLP", "CAVAROCCHI RUSCIO DENNIS ASSOCIATES, L.L.C.", "Environment America, Inc.", "BAKER DONELSON BEARMAN CALDWELL & BERKOWITZ", "Dickstein Shapiro LLP", "Generic Pharmaceutical Association", "Arent Fox LLP", "HOLLAND & KNIGHT LLP", "The Russell Group, Inc.", "NVG, LLC", "Venable LLP", "MEHLMAN CASTAGNETTI ROSEN BINGEL & THOMAS, INC.", "The Smith-Free Group", "ALPINE GROUP, INC.", "The Outlaw Group", "Norris, Tysse, Lampley & Lakis, LLP  FKA McGuiness Norris & Williams, LLP", "Peck Madigan Jones", "Sonosky, Chambers, Sachse, Endreson & Perry, LLP", "Ogilvy Government Relations", "Winston & Strawn LLP", "AMERICAN CABLE ASSOCIATION, INC.", "DEAN FOODS COMPANY", "National Employment Lawyers Association (NELA)", "ProEnglish, a project of U.S. Inc.", "Interactive Advertising Bureau", "ASSOCIATION OF NATIONAL ADVERTISERS, INC.", "ALPINE GROUP, INC.", "McBee Strategic Consulting, LLC", "BKSH & Associates", "ZELIFF ENTERPRISES", "Morgan Meguire, LLC", "Bates Capitol Group, Inc.", "Law Offices of Kevin G. Curtin", "BRICKFIELD, BURCHETTE, RITTS & STONE, P.C.", "BROWNSTEIN HYATT FARBER SCHRECK, LLP", "Mary E. Shields Government Relations, LLC", "Kountoupes Denham Carr & Reid, LLC", "WINE AND SPIRITS WHOLESALERS OF AMERICA, INC", "Covidien Inc.", "Bingham McCutchen LLP", "Lutheran Immigration and Refugee Service", "SIEMENS  CORPORATION", "The Advocacy Group", "Lugar Hellmann Group", "CHAMBERS, CONLON & HARTWELL, LLC", "Integrated Solutions Group", "AMERICA'S HEALTH INSURANCE PLANS, INC. (AHIP)", "The Nickles Group, LLC", "Forbes-Tate", "Thorp Reed & Armstrong, LLP", "Financial Accounting Foundation", "CAPITOL HEALTH GROUP, LLC", "BKSH & Associates", "Lincoln Policy Group", "ALPINE GROUP, INC.", "Confrere Strategies, LLC", "Balch & Bingham, LLP", "National Grain and Feed Association", "Foley & Lardner LLP", "AKIN GUMP STRAUSS HAUER & FELD", "The Normandy Group, LLC", "Oldaker Law Group, LLP", "ELECTRIC DRIVE TRANSPORTATION ASSOCIATION", "Nelson, Mullins, Riley & Scarborough", "Forbes-Tate", "Van Scoyoc Associates", "Margaret Mathna", "McKenna, Long & Aldridge", "AMERICAN ASSOCIATION FOR GERIATRIC PSYCHIATRY", "HUMANE SOCIETY OF THE U S", "BOCKORNY GROUP, INC.", "Citizens for Responsibility and Ethics in Washington", "CHILD WELFARE LEAGUE OF AMERICA", "THE LIVINGSTON GROUP, L.L.C.", "Squire Patton Boggs", "EMERSON", "Ogilvy Government Relations", "Rich Feuer Anderson", "Abigail Stork", "Van Scoyoc Associates", "Nathanson+Hauck", "INTERNATIONAL CODE COUNCIL (ICC)", "Capitol Hill Strategies,  LLC", "HYJEK & FIX, INC.", "Kogovsek & Associates, Inc.", "Combest, Sell & Associates, LLC", "PODESTA GROUP, INC.", "K&L GATES LLP", "GENZYME CORPORATION", "ALSTON & BIRD, LLP", "AMERICAN THORACIC SOCIETY", "Camille Bonta", "Van Scoyoc Associates", "Transportation Intermediaries Association", "United Food & Commercial Workers International Union", "Jones Walker, LLP", "King & Spalding LLP", "Ryan MacKinnon Vasapoli and Berzok, LLP", "C & C CONSULTING", "The Nickles Group, LLC", "AMERICAN BUS ASSOCIATION", "Institute of Makers of Explosives", "VAN NESS FELDMAN, LLP", "The Gibson Group, LLC", "Panuzio & Giordano", "Bridgestone Americas Inc.", "MARCUS G. FAUST, PC", "ALPINE GROUP, INC.", "ALLIANCE OF AUTOMOBILE MANUFACTURERS", "K&L GATES LLP", "David Leach", "Mr. Galen Reser", "The Raben Group", "H. M. RILEY ASSOCIATES, LLC", "MetLife Group, Inc.", "NVG, LLC", "ALPINE GROUP, INC.", "Kadesh & Associates, LLC", "Robert A. Rapoza Associates", "ALPINE GROUP, INC.", "Winston & Strawn LLP", "National Cotton Council", "National Athletic Trainers' Association", "Hogan Lovells US LLP", "Hall Estill Hardwick Gable Golden & Nelson", "Fierce, Isakowitz & Blalock", "U.S. GLOBAL LEADERSHIP CAMPAIGN", "Squire Patton Boggs", "Ocean Champions", "Ball Corporation (including Ball Aerospace & Technologies Corp.)", "Design-Build Institute of America", "SC Partners LLC", "Murphy Consulting LLC", "INNOVATIVE FEDERAL STRATEGIES, LLC", "CINCINNATI FINANCIAL CORPORATION", "Peck Madigan Jones", "Cassidy & Associates, Inc. (formerly known as Cassidy & Associates)", "The Normandy Group, LLC", "Summit Strategies Government Affairs", "Volkswagen Group of America, Inc.", "Van Scoyoc Associates", "Capitol Counsel LLC", "BERKSHIRE HATHAWAY ENERGY (formerly MidAmerican Energy Holdings Company)", "American Chemistry Council", "Mr. James C. Barker", "MARQUETTE UNIVERSITY", "Capitol Decisions, Inc.", "The Smith-Free Group", "BNSF RAILWAY COMPANY", "Skadden, Arps, Slate, Meagher & Flom, LLP", "SONNENSCHEIN NATH & ROSENTHAL LLP", "Capitol Counsel LLC", "TEMPLE-INLAND INC.", "Squire Patton Boggs", "Capitol Hill Strategies,  LLC", "Squire Patton Boggs", "C2 GROUP, LLC", "Principal Financial Group", "Walter Consulting", "Sheffield Brothers", "Noble Strategies", "Tarplin, Downs & Young, LLC", "East End Group, LLC", "AMERICAN DIABETES ASSOCIATION", "CON-WAY INC (FORMERLY KNOWN AS CNF INC)", "Kamins Consulting", "Peck Madigan Jones", "Massachusetts Institute of Technology", "ALLIED PILOTS ASSOCIATION", "Ogilvy Government Relations", "Saltchuk Resources, Inc.", "McDermott Will & Emery LLP", "Cassidy & Associates, Inc. (formerly known as Cassidy & Associates)", "JOHN G. CAMPBELL, INC.", "Kogovsek & Associates, Inc.", "Kanner & Associates, LLC", "BIOGEN, IDEC", "BROWNSTEIN HYATT FARBER SCHRECK, LLP", "CAPITOL HEALTH GROUP, LLC", "BOCKORNY GROUP, INC.", "Friends of the Global Fight Against AIDS, Tuberculosis and Malaria", "THE PMA GROUP", "Venable LLP", "Van Scoyoc Associates", "Andrews Kurth LLP", "The Ferguson Group, LLC", "Nossaman LLP (Formerly Nossaman LLP/O'Connor & Hannan)", "HOLLAND & KNIGHT LLP", "Stanton Park Group", "William A. Blakey & Associates", "ALPINE GROUP, INC.", "K&L GATES LLP", "Compressed Gas Association, Inc.", "Van Scoyoc Associates", "The Advocacy Group", "Sidley Austin LLP", "Dutko Worldwide, LLC d/b/a Grayling", "Capitol Hill Strategies, LLC", "Wiley Rein LLP", "Rock & Associates", "Hallmark Cards, Inc", "PACE, LLP (Formerly PACE-CAPSTONE)", "Birch, Horton, Bittner & Cherot", "Van Scoyoc Associates", "Crossroads Strategies, LLC", "ADS Ventures, Inc.", "FOLEY HOAG LLP", "BECHTEL NATIONAL, INC", "PROPERTY CASUALTY INSURERS ASSOCIATION OF AMERICA", "NOVARTIS", "CELGENE CORPORATION", "Combest, Sell & Associates, LLC", "The Cormac Group, LLC", "S-3 Group (FKA Shockey Scofield Solutions)", "Dow Lohnes Government Strategies LLC", "HOLLAND & KNIGHT LLP", "UNDERWRITERS LABORATORIES INC.", "FOLEY HOAG LLP", "JOHN G. CAMPBELL, INC.", "Van Scoyoc Associates", "FOLEY HOAG LLP", "THE ICKES AND ENRIGHT GROUP, INC.", "Davis & Harman LLP", "Cassidy & Associates, Inc. (formerly known as Cassidy & Associates)", "Alcalde & Fay", "HollyFrontier Corporation", "CGCN GROUP, LLC (formerly known as Clark Geduldig Cranford & Nielsen, LLC)", "The Mattingley Group", "JK3 ASSOCIATES", "DigitalGlobe, Inc.", "AIRPORTS COUNCIL INTERNATIONAL -- NORTH AMERICA", "PRIME POLICY GROUP", "BROTHERHOOD OF RAILROAD SIGNALMEN", "Roberti Associates", "BAKER DONELSON BEARMAN CALDWELL & BERKOWITZ", "ARKANSAS FARM BUREAU FEDERATION", "General Motors Company", "Pickard Djinis and Pisarri LLP", "Capitol Decisions, Inc.", "Polsinelli PC", "Elevanta, LLC", "BRACY TUCKER BROWN & VALANZANO, INC.", "Philips Holding USA Inc.", "APPLIED BIOSYSTEMS", "Wiley Rein LLP", "K&L GATES LLP", "Americans for Prosperity", "Fierce, Isakowitz & Blalock", "Williams and Jensen, PLLC", "CFM STRATEGIC COMMUNICATIONS (CONKLING FISKUM & MCCORMICK)", "The Brightup Group LLC", "Nossaman LLP (Formerly Nossaman LLP/O'Connor & Hannan)", "National Utility Contractors Association", "Robertson, Monagle, & Eastaugh PC (formelry known at Hoffman, Silver, Gilman and", "Missy Edwards Strategies, LLC", "DIGITAL MEDIA ASSN", "MARATHON PETROLEUM CORPORATION", "AFL-CIO", "POLARIS GOVERNMENT RELATIONS, LLC", "McDermott Will & Emery LLP", "Forbes-Tate", "ML STRATEGIES, LLC", "Mr. Bruce Moyer", "Molina Healthcare, Inc.", "Evergreen Associates, LTD.", "Association of Metropolitan Water Agencies", "Strategic Marketing Innovations", "WorldatWork", "PODESTA GROUP, INC.", "QUALCOMM, INCORPORATED", "FLACK ASSOCIATES, LLC", "AMERICAN ASSOCIATION FOR CLINICAL CHEMISTRY", "Becker & Poliakoff, P.A.", "HealthFutures, LLC", "MHC Health Strategies", "American Apparel & Footwear Association", "BLANK ROME GOVERNMENT RELATIONS", "Air Transport Association of America, Inc.(d/b/a Airlines for America)", "Argus Media, Inc.", "MEHLMAN CASTAGNETTI ROSEN BINGEL & THOMAS, INC.", "Muscular Dystrophy Association, Inc.", "Iowa Farm Bureau Federation", "AKIN GUMP STRAUSS HAUER & FELD", "ALSTOM Inc.", "CF Industries, Inc.", "Endo Pharmaceuticals Inc.", "Gray & Oscar, LLC (formerly Bob Gray, LLC)", "HUNTINGTON BANCSHARES INCORPORATED", "Mr. Jackson DeWitt", "Navigators Global LLC (Formerly DC Navigators, LLC)", "Dickstein Shapiro LLP", "AKIN GUMP STRAUSS HAUER & FELD", "American Council of Life Insurers", "Van Heuvelen Strategies, LLC", "Telecommunications Industry Association", "Holland & Hart LLP", "Morrissey Strategic Partners, LLC", "Downey McGrath Group, Inc.", "Dickstein Shapiro LLP", "Etherton and Associates, Inc.", "MARTHA BRADDOCK", "CENTER FOR BIOLOGICAL DIVERSITY", "Avenue Solutions", "Ogilvy Government Relations", "The Keelen Group, LLC", "ML STRATEGIES, LLC", "Dell Technologies, Inc.", "CapitalEdge Advocacy Inc. (formerly CapitalEdge Advocacy, LLC)", "Summit Strategies Government Affairs LLC", "The Normandy Group, LLC", "Mr. Emery Simon", "WASHINGTON PARTNERS, LLC", "CALPINE CORPORATION", "Mehlman Castagnetti Rosen & Thomas, Inc.", "MorphoTrust USA", "PEOPLE FOR THE AMERICAN WAY", "The Nickles Group, LLC", "BROWNSTEIN HYATT FARBER SCHRECK, LLP", "Tarplin, Downs & Young, LLC", "Elmendorf Ryan", "The McManus Group, DBA Antimicrobial Innovation Alliance", "Ogilvy Government Relations", "J.A. Green and Company (formerly LLC)", "Avenue Solutions", "INNOVATIVE FEDERAL STRATEGIES, LLC", "Public Strategies Washington, Inc.", "Panuzio & Giordano", "ALSTON & BIRD, LLP", "The Cormac Group, LLC", "St. Jude Medical, Inc.", "Brooks, Pierce, McLendon, Humphrey & Leonard, L.L.P.", "Dutko Worldwide, LLC d/b/a Grayling", "The Nickles Group, LLC", "Van Scoyoc Associates", "K&L GATES LLP", "Avenue Solutions", "Elmendorf Ryan", "Dickstein Shapiro LLP", "Beam Suntory Inc.(f/k/a Beam Inc.)", "BOEHRINGER INGELHEIM PHARMACEUTICALS, INC.", "KANSAS FARM BUREAU", "Alabama Farmers Federation", "Mercury Strategies, LLC", "Capitol Tax Partners, LLP", "Andrew Cochran", "Wells Health Group", "Capitol Hill Consulting Group", "MINTZ LEVIN COHN FERRIS GLOVSKY AND POPEO, P.C.", "Van Scoyoc Associates", "Kent & O'Connor, Inc.", "Palmetto Group", "Cassidy & Associates, Inc. (formerly known as Cassidy & Associates)", "WINNING STRATEGIES WASHINGTON", "OWENS-ILLINOIS, INC", "Walker, Martin & Hatch, LLC", "The McManus Group", "Ogilvy Government Relations", "American Continental Group", "National Association of Conservation Districts", "Wilmer Cutler Pickering Hale and Dorr LLP", "NATIONAL AFFORDABLE HOUSING MANAGEMENT ASSOCIATION (NAHMA)", "Dickstein Shapiro LLP", "Van Scoyoc Associates", "Capitol Counsel LLC", "Downey McGrath Group, Inc.", "LEWIS-BURKE ASSOCIATES, LLC", "American Horticulture Industry Association", "BGR Government Affairs", "MARATHON OIL CORPORATION", "Physician Insurers Association of America", "Van Scoyoc Associates", "Environmental Technology Council", "MASSACHUSETTS MEDICAL SOCIETY", "THE COALITION TO STOP GUN VIOLENCE", "HYJEK & FIX, INC.", "The OB-C Group. LLC", "Alcalde & Fay", "MWW Group", "Capitol Decisions, Inc.", "Westner Associates", "North Bridge Communications, Inc.", "Etherton and Associates, Inc.", "Townsend Public Affairs", "Fierce Government Relations", "K&L GATES LLP", "Peck Madigan Jones", "Capitol Counsel LLC", "Valerie Morse White Consulting", "Hogan Lovells US LLP", "Glaxosmithkline Inc.", "Mercury", "AMERICAN WIND ENERGY ASSOCIATION", "Harris, Wiltshire & Grannis LLP (f/k/a Wiltshire & Grannis LLP)", "CompuCredit Corporation", "Squire Patton Boggs", "Barnes & Thornburg LLP", "Polsinelli PC (FKA Polsinelli Shughart PC)", "WINNING STRATEGIES WASHINGTON", "Robertson, Monagle, & Eastaugh PC (formelry known at Hoffman, Silver, Gilman and", "Investment Company Institute", "National Hispanic Medical Association", "HURT, NORTON & ASSOCIATES, INC.", "C2 GROUP, LLC", "PODESTA GROUP, INC.", "VENN STRATEGIES, LLC", "The Normandy Group, LLC", "BP AMERICA, INC", "SRG & Associates", "HOLLAND & KNIGHT LLP", "Heartland Solutions Group, Inc.", "POLICY DIRECTIONS INC.", "PODESTA GROUP, INC.", "Arent Fox LLP", "Crossroads Strategies, LLC", "The Duberstein Group Inc.", "UNILEVER UNITED STATES, INC.", "BE Consulting", "CHAMBERS, CONLON & HARTWELL, LLC", "GILDEA, MICHAEL W", "Heather Podesta + Partners, LLC", "LOCKHEED MARTIN CORPORATION", "JAY HOWELL & ASSOCIATES", "Mr. Jon Christensen", "UNIVERSITY OF ILLINOIS", "NetJets Association of Shared Aircraft Pilots", "THE LIVINGSTON GROUP, L.L.C.", "Health and Medicine Counsel of Washington", "Dickstein Shapiro LLP", "The Society of the Plastics Industry, Inc.", "JEWISH FEDERATION OF METROPOLITAN CHICAGO (JFMC)", "CAVAROCCHI RUSCIO DENNIS ASSOCIATES, L.L.C.", "Broydrick & Associates", "MAGAZINE PUBLISHERS OF AMERICA", "NETWORK", "Ernst & Young LLP (Washington Council Ernst & Young)", "BAY BRIDGE STRATEGIES, INC.", "Davis & Harman LLP", "POLICY DIRECTIONS INC.", "National Retail Federation", "MARCUS G. FAUST, PC", "WAL-MART STORES, INC", "VIACOM INTERNATIONAL SERVICES, INC.", "CARE Action Now, Inc.", "Kogovsek & Associates, Inc.", "Alcalde & Fay", "BOCKORNY GROUP, INC.", "Ridge Policy Group", "Groom Law Group, Chartered", "K&L GATES LLP", "The Ferguson Group, LLC", "King & Spalding LLP", "Heather Podesta + Partners, LLC", "TCH Group, LLC", "BOCKORNY GROUP, INC.", "ALSTON & BIRD LLP", "The American Physiological Society", "National Committee to Preserve Social Security and Medicare", "NATIONAL ASSOCIATION OF CHAIN DRUG STORES", "PARRY, ROMANI, DECONCINI & SYMMS", "The United States Pharmacopeial Convention", "Mr. Jonathan Band", "The Cormac Group, LLC", "Raytheon Company", "BOCKORNY GROUP, INC.", "APCO Worldwide Inc.", "American Academy of Actuaries", "EASTMAN KODAK COMPANY", "HALEY & ASSOCIATES", "Winston & Strawn LLP", "Davis & Harman LLP", "DEUTSCHE POST WORLD NET - USA, INC", "Trammell and Company", "ALSTON & BIRD, LLP", "SCULLY ROSKEY AND MISSMAR", "Human Rights First", "HURT, NORTON & ASSOCIATES, INC.", "38 North Solutions, LLC", "Bradley Arant Boult Cummings LLP", "Mars, Incorporated", "SIEMENS  CORPORATION", "Venable LLP", "Quinn Gillespie & Associates", "McAllister & Quinn, LLC", "MWW Group", "Mercury", "SULLIVAN & CROMWELL LLP", "THE PMA GROUP", "Arnold & Porter LLP", "K&L GATES LLP", "ALSTON & BIRD, LLP", "McBee Strategic Consulting, LLC", "TECHNOLOGY NETWORK AKA TECHNET", "Venable LLP", "American Society of Consultant Pharmacists", "O'NEILL, ATHY & CASEY, P.C.", "CARPI & CLAY, INC.", "U.S. Public Interest Research Group", "NISOURCE, INC", "CLEARY GOTTLIEB STEEN & HAMILTON LLP", "TROUTMAN SANDERS PUBLIC AFFAIRS GROUP, LLC", "Capitol Tax Partners, LLP", "Greystone Group LLC", "PODESTA GROUP, INC.", "McBee Strategic Consulting, LLC", "THE PMA GROUP", "Hogan Lovells US LLP", "DRINKER BIDDLE & REATH LLP", "Denny Miller Associates", "Hecht Latham Spencer & Associates, Inc., formerly known as Hecht Spencer & Assoc", "ACT! for America", "ConocoPhillips", "PLUM CREEK TIMBER COMPANY, INC.", "Horizon Government Affairs", "K&L GATES LLP", "AMERICAN ASSOCIATION FOR JUSTICE", "AKIN GUMP STRAUSS HAUER & FELD", "PEABODY INVESTMENTS CORP.", "Advocates for Highway and Auto Safety", "Franklin Square Group, LLC", "Red Maple Consulting, LLC", "CGCN GROUP, LLC (formerly known as Clark Geduldig Cranford & Nielsen, LLC)", "TRI-STATE GENERATION AND TRANSMISSION ASSOCIATION, INC.", "AMERICAN COUNCIL ON EDUCATION", "Van Scoyoc Associates", "American Arts Alliance dba Performing Arts Alliance", "Capitol Tax Partners, LLP", "Sills Associates", "PORTERFIELD, LOWENTHAL, FETTIG & SEARS, LLC", "Capitol Decisions, Inc.", "Rich Feuer Anderson", "BLANK ROME GOVERNMENT RELATIONS", "Hearth, Patio & Barbecue Association", "National Society of Professional Engineers", "GO DADDY.COM", "National Association of Letter Carriers", "Van Ness Feldman, LLP", "MWW Group", "The American Occupational Therapy Association, Inc. (AOTA)", "The Washington Tax & Public Policy Group (formerly The Washington Tax Group)", "Capitol City Group, Ltd.", "Kent & O'Connor, Inc.", "MWW Group LLC", "AGRIBANK, FCB", "CGCN GROUP, LLC (formerly known as Clark Geduldig Cranford & Nielsen, LLC)", "ENS RESOURCES, INC.", "Alcalde & Fay", "David Leach", "National Religious Campaign Against Torture Action Fund", "Otsuka America Pharmaceutical, Inc.", "Thorn Run Partners", "Private Equity Growth Capital Council", "Strategic Marketing Innovations", "Missy Edwards Strategies, LLC", "Tarplin, Downs & Young, LLC", "The Fritts Group", "National Council of La Raza", "MWW Group", "National Cotton Council", "Van Scoyoc Associates", "FRANKLIN CREEK CONSULTING", "PEARSON EDUCATION (FKA Pearson , Inc)", "Capitol Counsel LLC", "Fierce, Isakowitz & Blalock"]}],
                         {"barmode": "overlay", "legend": {"bgcolor": "#F5F6F9", "font": {"color": "#4D5663"}}, "paper_bgcolor": "#F5F6F9", "plot_bgcolor": "#F5F6F9", "title": {"font": {"color": "#4D5663"}, "text": "Number of Times a Firm Has Registered a Report"}, "xaxis": {"gridcolor": "#E1E5ED", "showgrid": true, "tickfont": {"color": "#4D5663"}, "title": {"font": {"color": "#4D5663"}, "text": "Registrants"}, "zerolinecolor": "#E1E5ED"}, "yaxis": {"gridcolor": "#E1E5ED", "showgrid": true, "tickfont": {"color": "#4D5663"}, "title": {"font": {"color": "#4D5663"}, "text": "count"}, "zerolinecolor": "#E1E5ED"}},
                         {"showLink": true, "linkText": "Export to plot.ly", "plotlyServerURL": "https://plot.ly", "responsive": true}
                     ).then(function(){
                             
-var gd = document.getElementById('8e7052aa-632b-417b-981d-9d27992379ad');
+var gd = document.getElementById('fb74e459-0b20-48ca-91b3-4f3ebb132025');
 var x = new MutationObserver(function (mutations, observer) {{
         var display = window.getComputedStyle(gd).display;
         if (!display || display === 'none') {{
@@ -13512,7 +14190,7 @@ if (outputEl) {{
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[51]:</div>
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">dfviz</span><span class="o">.</span><span class="n">iplot</span><span class="p">(</span>
@@ -13543,21 +14221,21 @@ if (outputEl) {{
 <div>
         
         
-            <div id="1b458779-ff1c-40bd-bb9e-8c6f5556870f" class="plotly-graph-div" style="height:525px; width:100%;"></div>
+            <div id="cb5b30cc-2810-4b72-80ae-77c2d7592ee0" class="plotly-graph-div" style="height:525px; width:100%;"></div>
             <script type="text/javascript">
                 require(["plotly"], function(Plotly) {
                     window.PLOTLYENV=window.PLOTLYENV || {};
                     window.PLOTLYENV.BASE_URL='https://plot.ly';
                     
-                if (document.getElementById("1b458779-ff1c-40bd-bb9e-8c6f5556870f")) {
+                if (document.getElementById("cb5b30cc-2810-4b72-80ae-77c2d7592ee0")) {
                     Plotly.newPlot(
-                        '1b458779-ff1c-40bd-bb9e-8c6f5556870f',
-                        [{"marker": {"color": "rgba(255, 153, 51, 1.0)", "line": {"width": 1.3}, "opacity": 0.8, "size": 12, "symbol": "circle"}, "mode": "markers", "name": "1st Quarter (Jan 1 - Mar 31)", "textfont": {"color": "#4D5663"}, "type": "scatter", "uid": "c74f96d4-873d-4b59-bc22-fc55e9752180", "x": [2017, 2009, 2016, 2011, 2008, 2018, 2010, 2014, 2016, 2011, 2010, 2010, 2009, 2011, 2018, 2018, 2008, 2013, 2015, 2010, 2008, 2014, 2018, 2018, 2012, 2017, 2013, 2018, 2016, 2018, 2011, 2012, 2012, 2008, 2010, 2014, 2018, 2013, 2012, 2014, 2013, 2015, 2010, 2014, 2009, 2008, 2014, 2010, 2018, 2014, 2018, 2012, 2010, 2012, 2008, 2009, 2018, 2009, 2017, 2010, 2011, 2014, 2015, 2013, 2009, 2013, 2009, 2015, 2014, 2018, 2012, 2018, 2017, 2017, 2010, 2010, 2009, 2009, 2012, 2009, 2011, 2008, 2009, 2013, 2016, 2013, 2017, 2018, 2018, 2016, 2014, 2014, 2016, 2013, 2009, 2009, 2008, 2012, 2018, 2013, 2010, 2016, 2018, 2015, 2011, 2012, 2009, 2014, 2008, 2008, 2010, 2013, 2014, 2018, 2017, 2008, 2014, 2013, 2011, 2011, 2011, 2009, 2014, 2012, 2014, 2018, 2013, 2016, 2012, 2011, 2014, 2008, 2016, 2010, 2017, 2016], "y": [20000.0, null, 10000.0, 20000.0, 30000.0, 80000.0, 50000.0, 40000.0, 310000.0, 30000.0, 40000.0, 45000.0, 20000.0, 60000.0, 20000.0, 290000.0, 30000.0, 45000.0, 10000.0, 60000.0, 50000.0, 100000.0, 20000.0, 60000.0, 20000.0, 100000.0, 20000.0, 30000.0, null, 320000.0, 470000.0, 1396340.0, 10000.0, 30000.0, 50000.0, 50000.0, 20000.0, 30000.0, 18800.0, 30000.0, 50000.0, 270000.0, 20000.0, 220000.0, 90000.0, null, 1430000.0, null, 360000.0, 20000.0, 380000.0, 80000.0, 2730000.0, 60000.0, 40000.0, 1550000.0, 200000.0, 40000.0, 45000.0, 160290.0, 60000.0, 40000.0, 50000.0, 10000.0, 556581.0, 30000.0, 20000.0, 20000.0, 20000.0, 490000.0, 87164.0, 3140000.0, 20000.0, null, 50000.0, 1980000.0, 100000.0, null, 10000.0, 30000.0, 650000.0, 20098.0, 1867075.0, 80000.0, 40000.0, 10000.0, 30000.0, 10000.0, 30000.0, 80000.0, 7500.0, 120000.0, 52500.0, 80000.0, 190000.0, 120000.0, 25000.0, null, 10000.0, 100000.0, 30000.0, 90000.0, 80000.0, 10000.0, 20000.0, 30000.0, 20000.0, 60000.0, 10000.0, 10000.0, 30000.0, 20000.0, 1840000.0, 10000.0, 50000.0, 480000.0, 740000.0, 50000.0, 275000.0, 20000.0, null, 40000.0, 40000.0, 240000.0, 20000.0, 20000.0, 8200.0, 30000.0, 121729.0, 20000.0, 40000.0, 14000.0, 60000.0, 30000.0, 50000.0, 15000.0]}, {"marker": {"color": "rgba(55, 128, 191, 1.0)", "line": {"width": 1.3}, "opacity": 0.8, "size": 12, "symbol": "circle"}, "mode": "markers", "name": "4th Quarter (Oct 1 - Dec 31)", "textfont": {"color": "#4D5663"}, "type": "scatter", "uid": "6f0da1ae-46e5-4de9-befc-1611429fc830", "x": [2010, 2016, 2015, 2015, 2017, 2009, 2015, 2012, 2017, 2017, 2016, 2009, 2011, 2017, 2014, 2010, 2011, 2017, 2010, 2016, 2013, 2013, 2008, 2008, 2015, 2008, 2008, 2015, 2010, 2010, 2014, 2012, 2009, 2011, 2011, 2017, 2009, 2009, 2011, 2009, 2011, 2014, 2010, 2012, 2008, 2008, 2014, 2011, 2017, 2017, 2012, 2017, 2013, 2016, 2008, 2008, 2015, 2011, 2017, 2013, 2009, 2010, 2013, 2014, 2013, 2008, 2010, 2009, 2012, 2008, 2008, 2017, 2010, 2008, 2016, 2008, 2008, 2017, 2010, 2013, 2013, 2017, 2016, 2015, 2012, 2013, 2010, 2008, 2012, 2015, 2015, 2017, 2009, 2011, 2014, 2008, 2013, 2011, 2016, 2010, 2011, 2014, 2011, 2017, 2017, 2010, 2010, 2012, 2015, 2012, 2009, 2017, 2017, 2014, 2017, 2016, 2011, 2009, 2012, 2016, 2016, 2013, 2012, 2008, 2009, 2014, 2009, 2009, 2010, 2009, 2010, 2011, 2012, 2009, 2015, 2012, 2012, 2015, 2011, 2008, 2015, 2009, 2009, 2014, 2011, 2008, 2011, 2017, 2009, 2013, 2012, 2011, 2010, 2016, 2014, 2016, 2012, 2010, 2010, 2013, 2015, 2014, 2017, 2009, 2010, 2017, 2010, 2013, 2009, 2013, 2010, 2011, 2009, 2009, 2012, 2010, 2014, 2008, 2011, 2017, 2015, 2015, 2016, 2017, 2012, 2012, 2012, 2016, 2014, 2014, 2014, 2011], "y": [54513.0, 50000.0, 15000.0, 30000.0, null, 560000.0, 10000.0, 45000.0, null, 40000.0, 10000.0, 30000.0, 5557.0, 352450.0, 50000.0, 50000.0, 650000.0, null, 90000.0, 30000.0, 70000.0, 40000.0, 24000.0, 20000.0, 30000.0, 10000.0, 9999.0, 20684.0, 30000.0, 30000.0, 450000.0, 45000.0, 30000.0, 40000.0, 10000.0, 760000.0, 30000.0, 50000.0, 10000.0, null, 70000.0, 20000.0, 60000.0, 60000.0, 30000.0, 260000.0, 30000.0, null, 50000.0, 50000.0, 245000.0, 90000.0, 21000.0, 20000.0, 15000.0, 30000.0, 30000.0, 20000.0, 20000.0, 20000.0, 357600.0, 80000.0, 20000.0, 19000.0, 20000.0, 20000.0, 75000.0, 370000.0, 30000.0, null, 10000.0, 37500.0, null, 40000.0, 40000.0, 20000.0, 30000.0, 30000.0, 878112.0, 30000.0, 40000.0, 20000.0, 80000.0, 50000.0, 40000.0, 24348.0, null, 170000.0, 80000.0, 30000.0, 50000.0, 50000.0, 20000.0, null, null, 90000.0, 240000.0, 60000.0, 30000.0, 30000.0, null, 240000.0, 50000.0, null, 60000.0, 20000.0, 20000.0, 20000.0, 68912.0, 410000.0, 20000.0, 120000.0, null, 13409.0, 30000.0, 1360000.0, null, 60000.0, 80000.0, 54377.0, 100000.0, 20000.0, 20000.0, 50000.0, 50000.0, 60000.0, 30000.0, 60000.0, 20000.0, 40000.0, 60000.0, 748150.0, 30000.0, 20000.0, 60000.0, 50000.0, 50000.0, 90000.0, 90000.0, 10000.0, 50000.0, 40000.0, 10000.0, 10000.0, 1019624.0, 20000.0, 20000.0, 30000.0, 100000.0, 20000.0, 120000.0, 57000.0, 20000.0, 150000.0, 450000.0, 20000.0, 450000.0, 10000.0, 10000.0, 30000.0, 45000.0, 20000.0, 120000.0, 570000.0, 12000.0, 60000.0, 20000.0, 9305.0, 60000.0, 40000.0, 40000.0, 30000.0, 160000.0, null, null, 1230000.0, null, 120000.0, 33075.0, null, 20000.0, 40000.0, 10000.0, 30000.0, 100000.0, 37500.0, 20000.0, 80000.0, 740000.0, 100000.0, 40000.0, 230000.0]}, {"marker": {"color": "rgba(50, 171, 96, 1.0)", "line": {"width": 1.3}, "opacity": 0.8, "size": 12, "symbol": "circle"}, "mode": "markers", "name": "2nd Quarter (Apr 1 - June 30)", "textfont": {"color": "#4D5663"}, "type": "scatter", "uid": "8f209481-6cb6-401f-a5e4-c01b0c00a231", "x": [2015, 2009, 2011, 2014, 2012, 2012, 2017, 2010, 2008, 2015, 2017, 2017, 2017, 2013, 2017, 2014, 2015, 2016, 2012, 2016, 2015, 2008, 2015, 2010, 2010, 2011, 2017, 2014, 2017, 2010, 2008, 2011, 2011, 2015, 2017, 2008, 2010, 2014, 2009, 2011, 2011, 2015, 2016, 2010, 2014, 2012, 2014, 2014, 2014, 2009, 2012, 2016, 2008, 2012, 2013, 2014, 2008, 2009, 2008, 2009, 2008, 2015, 2013, 2010, 2014, 2008, 2008, 2012, 2014, 2010, 2013, 2017, 2017, 2010, 2011, 2008, 2013, 2015, 2008, 2011, 2017, 2017, 2009, 2013, 2010, 2008, 2009, 2015, 2014, 2015, 2008, 2014, 2011, 2016, 2015, 2017, 2013, 2009, 2012, 2014, 2013, 2017, 2010, 2011, 2011, 2015, 2011, 2010, 2016, 2008, 2009, 2011, 2017, 2009, 2010, 2015, 2008, 2013, 2008, 2008, 2011, 2014, 2014, 2012, 2011, 2011, 2017, 2014], "y": [70000.0, 60000.0, 20000.0, 7729.0, 50000.0, 20000.0, 27340.0, 510000.0, 245000.0, 50000.0, null, 50000.0, null, 40000.0, 2210000.0, 10000.0, 10000.0, 20000.0, 50000.0, 50000.0, 80000.0, 7890000.0, 270000.0, 260000.0, 90000.0, 61000.0, 30000.0, 50000.0, 90000.0, 80000.0, 20000.0, 130000.0, 24000.0, 40000.0, 20000.0, 110000.0, 70000.0, 30000.0, 60000.0, 21000.0, 80000.0, 60000.0, 150000.0, 40000.0, 20000.0, 1578100.0, 10000.0, 60000.0, 10000.0, 40000.0, 10000.0, 220000.0, 30000.0, 60000.0, 20000.0, 30000.0, 50000.0, 80000.0, 540000.0, 15000.0, 120000.0, 38809.0, 50000.0, 10000.0, 30000.0, 20000.0, 50000.0, 30000.0, 20000.0, 20000.0, 40000.0, 140000.0, 10000.0, null, 30000.0, 170000.0, 40000.0, 20000.0, 60000.0, 60000.0, 680000.0, 70000.0, 60000.0, 20000.0, 70000.0, 50000.0, null, 60000.0, 170000.0, 20000.0, null, 30000.0, 120200.0, 40000.0, 30000.0, null, 80000.0, 30000.0, 40000.0, null, 50000.0, 1260000.0, 50000.0, 4030000.0, 20000.0, 80000.0, 35000.0, 10000.0, 10000.0, null, 1750000.0, 50000.0, 20000.0, 30000.0, 1470000.0, 30000.0, 20000.0, 30000.0, 70000.0, 10000.0, 4338992.0, 15000.0, null, 20000.0, 207000.0, 20000.0, 240000.0, 40000.0]}, {"marker": {"color": "rgba(128, 0, 128, 1.0)", "line": {"width": 1.3}, "opacity": 0.8, "size": 12, "symbol": "circle"}, "mode": "markers", "name": "3rd Quarter (July 1 - Sep 30)", "textfont": {"color": "#4D5663"}, "type": "scatter", "uid": "2427fa22-18da-4b9e-b312-adffb1f11b3c", "x": [2009, 2011, 2016, 2017, 2010, 2010, 2017, 2012, 2008, 2009, 2013, 2012, 2010, 2011, 2010, 2015, 2009, 2011, 2017, 2009, 2010, 2013, 2010, 2014, 2016, 2008, 2010, 2008, 2010, 2008, 2012, 2015, 2009, 2011, 2016, 2012, 2015, 2008, 2012, 2012, 2012, 2011, 2015, 2013, 2012, 2008, 2010, 2017, 2015, 2016, 2008, 2009, 2012, 2009, 2009, 2011, 2009, 2012, 2015, 2009, 2014, 2017, 2012, 2010, 2011, 2009, 2009, 2013, 2010, 2013, 2013, 2011, 2010, 2009, 2008, 2011, 2011, 2008, 2012, 2014, 2010, 2011, 2010, 2012, 2008, 2017, 2009, 2008, 2009, 2015, 2010, 2011, 2017, 2009, 2013, 2015, 2009, 2013, 2010, 2008, 2010, 2008, 2010, 2013, 2010, 2008, 2010, 2008, 2017, 2009, 2013, 2012, 2015, 2017, 2008, 2017, 2014, 2016, 2008, 2010, 2009, 2009, 2015, 2017, 2010, 2010, 2009, 2013, 2009, 2016, 2008, 2015, 2009, 2008, 2011, 2013, 2012, 2010, 2015, 2017, 2009, 2016, 2010, 2013, 2017, 2014, 2012, 2009, 2011, 2017, 2016, 2011, 2008, 2010, 2014, 2008, 2014, 2008, 2014, 2012, 2009, 2008, 2008, 2016, 2010, 2009, 2016, 2017, 2008, 2009, 2015, 2010, 2017, 2017, 2008, 2010, 2016, 2009, 2009, 2013], "y": [80000.0, 10000.0, 30000.0, 20000.0, 70000.0, 10000.0, 10000.0, 30000.0, null, 10000.0, 20000.0, 1420000.0, 139998.0, 60000.0, null, 120000.0, 30000.0, 1800000.0, 130000.0, 100000.0, 20000.0, null, 70000.0, 50000.0, 80000.0, 30000.0, 30000.0, 220000.0, null, 70000.0, 10000.0, 200000.0, 34000.0, 20000.0, 50000.0, 487850.0, 20000.0, 50000.0, 40000.0, 50000.0, 70000.0, 300000.0, 11986.0, 20000.0, 20000.0, 10000.0, 260000.0, 60000.0, 50000.0, 160000.0, 1630000.0, 30000.0, 10000.0, 10000.0, 20000.0, 70000.0, 20000.0, 20000.0, 50000.0, 10000.0, 20000.0, 60000.0, 20000.0, 20000.0, 40000.0, 30000.0, null, 30000.0, 30000.0, 100000.0, null, 50000.0, 85108.0, 27000.0, null, 10000.0, 40000.0, 10000.0, null, 170000.0, 30000.0, null, 30000.0, 60000.0, 25000.0, 50000.0, 20000.0, 30000.0, 20000.0, 70000.0, null, 20000.0, 30000.0, 1420000.0, 40000.0, null, 75000.0, 40000.0, 40000.0, null, 230000.0, 60000.0, null, null, null, 10000.0, 20000.0, 100000.0, 30000.0, 136608.0, 280000.0, 10000.0, null, 120000.0, 10000.0, 30000.0, 20000.0, 10000.0, 20000.0, 80000.0, 10000.0, 120000.0, 50000.0, 20000.0, 10000.0, 80000.0, 30000.0, 60000.0, 60000.0, 20000.0, 3030000.0, null, null, 20000.0, 20000.0, 30000.0, 6000.0, 20000.0, 842000.0, 190000.0, 120000.0, 30000.0, 15000.0, 8500.0, 10000.0, 140000.0, 5000.0, 40000.0, 75000.0, 20000.0, 1760000.0, 40000.0, 30000.0, 20000.0, 80000.0, 30000.0, 40000.0, 80000.0, 20000.0, 10000.0, 20000.0, 50000.0, 20000.0, 15000.0, 10000.0, 60000.0, 20000.0, 30000.0, 1320000.0, 84615.0, 10000.0, 20000.0, 60000.0, 50000.0, 28626.0, 20000.0, 30000.0, 45000.0, 10000.0, 50000.0]}, {"marker": {"color": "rgba(219, 64, 82, 1.0)", "line": {"width": 1.3}, "opacity": 0.8, "size": 12, "symbol": "circle"}, "mode": "markers", "name": "Year-End (July 1 - Dec 31)", "textfont": {"color": "#4D5663"}, "type": "scatter", "uid": "62bfb30e-7481-4fbb-866e-44285f4bad40", "x": [2006, 2006, 2006, 2004, 2005, 2007, 2005, 2007, 2006, 2006, 2007, 2007, 2006, 2003, 2005, 2007, 2007, 2007, 2005, 2006, 2007, 2006, 2005, 2007, 2007, 2007, 2006, 2007, 2007, 2007, 2006, 2007, 2003, 2006, 2007, 2007, 2007], "y": [43000.0, 10000.0, 60000.0, 20000.0, 20000.0, 194546.0, 20000.0, 40000.0, 40000.0, null, 20000.0, 60000.0, 40000.0, 40000.0, 60000.0, 20000.0, 360000.0, 12000.0, 740000.0, 90000.0, 80000.0, 52602.0, 20000.0, 1100000.0, 20000.0, 150000.0, 20000.0, 40000.0, 40000.0, 60000.0, null, 20000.0, 20000.0, 20000.0, 20000.0, 20000.0, 120000.0]}, {"marker": {"color": "rgba(0, 128, 128, 1.0)", "line": {"width": 1.3}, "opacity": 0.8, "size": 12, "symbol": "circle"}, "mode": "markers", "name": "Mid-Year (Jan 1 - Jun 30)", "textfont": {"color": "#4D5663"}, "type": "scatter", "uid": "b0921790-c374-4c02-8b50-f776e37dc08f", "x": [2005, 2007, 2007, 2004, 2005, 2007, 2007, 2007, 2007, 2007, 2003, 2007, 2007, 2007, 2002, 2006, 2004, 2007, 2007, 2002, 2007, 2007, 2007, 2007], "y": [117617.0, 140000.0, 240000.0, 20000.0, null, null, 20000.0, 160000.0, 20000.0, 40000.0, 40000.0, 140000.0, 40000.0, 60000.0, null, 40000.0, 20000.0, 60000.0, 220000.0, 20000.0, 60000.0, 280000.0, 20000.0, 340000.0]}, {"marker": {"color": "rgba(255, 255, 51, 1.0)", "line": {"width": 1.3}, "opacity": 0.8, "size": 12, "symbol": "circle"}, "mode": "markers", "name": "UNDETERMINED", "textfont": {"color": "#4D5663"}, "type": "scatter", "uid": "a69088ec-b42b-4e0f-a29c-d39d43f50941", "x": [2013, 2012, 2018, 2009, 2010, 2009, 2017, 2008, 2008, 2011], "y": [null, null, null, null, null, null, null, null, null, null]}],
+                        'cb5b30cc-2810-4b72-80ae-77c2d7592ee0',
+                        [{"marker": {"color": "rgba(255, 153, 51, 1.0)", "line": {"width": 1.3}, "opacity": 0.8, "size": 12, "symbol": "circle"}, "mode": "markers", "name": "1st Quarter (Jan 1 - Mar 31)", "textfont": {"color": "#4D5663"}, "type": "scatter", "uid": "c3a02723-7034-4249-8a49-e444f6eda1c1", "x": [2017, 2009, 2016, 2011, 2008, 2018, 2010, 2014, 2016, 2011, 2010, 2010, 2009, 2011, 2018, 2018, 2008, 2013, 2015, 2010, 2008, 2014, 2018, 2018, 2012, 2017, 2013, 2018, 2016, 2018, 2011, 2012, 2012, 2008, 2010, 2014, 2018, 2013, 2012, 2014, 2013, 2015, 2010, 2014, 2009, 2008, 2014, 2010, 2018, 2014, 2018, 2012, 2010, 2012, 2008, 2009, 2018, 2009, 2017, 2010, 2011, 2014, 2015, 2013, 2009, 2013, 2009, 2015, 2014, 2018, 2012, 2018, 2017, 2017, 2010, 2010, 2009, 2009, 2012, 2009, 2011, 2008, 2009, 2013, 2016, 2013, 2017, 2018, 2018, 2016, 2014, 2014, 2016, 2013, 2009, 2009, 2008, 2012, 2018, 2013, 2010, 2016, 2018, 2015, 2011, 2012, 2009, 2014, 2008, 2008, 2010, 2013, 2014, 2018, 2017, 2008, 2014, 2013, 2011, 2011, 2011, 2009, 2014, 2012, 2014, 2018, 2013, 2016, 2012, 2011, 2014, 2008, 2016, 2010, 2017, 2016], "y": [20000.0, null, 10000.0, 20000.0, 30000.0, 80000.0, 50000.0, 40000.0, 310000.0, 30000.0, 40000.0, 45000.0, 20000.0, 60000.0, 20000.0, 290000.0, 30000.0, 45000.0, 10000.0, 60000.0, 50000.0, 100000.0, 20000.0, 60000.0, 20000.0, 100000.0, 20000.0, 30000.0, null, 320000.0, 470000.0, 1396340.0, 10000.0, 30000.0, 50000.0, 50000.0, 20000.0, 30000.0, 18800.0, 30000.0, 50000.0, 270000.0, 20000.0, 220000.0, 90000.0, null, 1430000.0, null, 360000.0, 20000.0, 380000.0, 80000.0, 2730000.0, 60000.0, 40000.0, 1550000.0, 200000.0, 40000.0, 45000.0, 160290.0, 60000.0, 40000.0, 50000.0, 10000.0, 556581.0, 30000.0, 20000.0, 20000.0, 20000.0, 490000.0, 87164.0, 3140000.0, 20000.0, null, 50000.0, 1980000.0, 100000.0, null, 10000.0, 30000.0, 650000.0, 20098.0, 1867075.0, 80000.0, 40000.0, 10000.0, 30000.0, 10000.0, 30000.0, 80000.0, 7500.0, 120000.0, 52500.0, 80000.0, 190000.0, 120000.0, 25000.0, null, 10000.0, 100000.0, 30000.0, 90000.0, 80000.0, 10000.0, 20000.0, 30000.0, 20000.0, 60000.0, 10000.0, 10000.0, 30000.0, 20000.0, 1840000.0, 10000.0, 50000.0, 480000.0, 740000.0, 50000.0, 275000.0, 20000.0, null, 40000.0, 40000.0, 240000.0, 20000.0, 20000.0, 8200.0, 30000.0, 121729.0, 20000.0, 40000.0, 14000.0, 60000.0, 30000.0, 50000.0, 15000.0]}, {"marker": {"color": "rgba(55, 128, 191, 1.0)", "line": {"width": 1.3}, "opacity": 0.8, "size": 12, "symbol": "circle"}, "mode": "markers", "name": "4th Quarter (Oct 1 - Dec 31)", "textfont": {"color": "#4D5663"}, "type": "scatter", "uid": "15dd0c2c-bf29-45cb-b5f0-1be7c72a1147", "x": [2010, 2016, 2015, 2015, 2017, 2009, 2015, 2012, 2017, 2017, 2016, 2009, 2011, 2017, 2014, 2010, 2011, 2017, 2010, 2016, 2013, 2013, 2008, 2008, 2015, 2008, 2008, 2015, 2010, 2010, 2014, 2012, 2009, 2011, 2011, 2017, 2009, 2009, 2011, 2009, 2011, 2014, 2010, 2012, 2008, 2008, 2014, 2011, 2017, 2017, 2012, 2017, 2013, 2016, 2008, 2008, 2015, 2011, 2017, 2013, 2009, 2010, 2013, 2014, 2013, 2008, 2010, 2009, 2012, 2008, 2008, 2017, 2010, 2008, 2016, 2008, 2008, 2017, 2010, 2013, 2013, 2017, 2016, 2015, 2012, 2013, 2010, 2008, 2012, 2015, 2015, 2017, 2009, 2011, 2014, 2008, 2013, 2011, 2016, 2010, 2011, 2014, 2011, 2017, 2017, 2010, 2010, 2012, 2015, 2012, 2009, 2017, 2017, 2014, 2017, 2016, 2011, 2009, 2012, 2016, 2016, 2013, 2012, 2008, 2009, 2014, 2009, 2009, 2010, 2009, 2010, 2011, 2012, 2009, 2015, 2012, 2012, 2015, 2011, 2008, 2015, 2009, 2009, 2014, 2011, 2008, 2011, 2017, 2009, 2013, 2012, 2011, 2010, 2016, 2014, 2016, 2012, 2010, 2010, 2013, 2015, 2014, 2017, 2009, 2010, 2017, 2010, 2013, 2009, 2013, 2010, 2011, 2009, 2009, 2012, 2010, 2014, 2008, 2011, 2017, 2015, 2015, 2016, 2017, 2012, 2012, 2012, 2016, 2014, 2014, 2014, 2011], "y": [54513.0, 50000.0, 15000.0, 30000.0, null, 560000.0, 10000.0, 45000.0, null, 40000.0, 10000.0, 30000.0, 5557.0, 352450.0, 50000.0, 50000.0, 650000.0, null, 90000.0, 30000.0, 70000.0, 40000.0, 24000.0, 20000.0, 30000.0, 10000.0, 9999.0, 20684.0, 30000.0, 30000.0, 450000.0, 45000.0, 30000.0, 40000.0, 10000.0, 760000.0, 30000.0, 50000.0, 10000.0, null, 70000.0, 20000.0, 60000.0, 60000.0, 30000.0, 260000.0, 30000.0, null, 50000.0, 50000.0, 245000.0, 90000.0, 21000.0, 20000.0, 15000.0, 30000.0, 30000.0, 20000.0, 20000.0, 20000.0, 357600.0, 80000.0, 20000.0, 19000.0, 20000.0, 20000.0, 75000.0, 370000.0, 30000.0, null, 10000.0, 37500.0, null, 40000.0, 40000.0, 20000.0, 30000.0, 30000.0, 878112.0, 30000.0, 40000.0, 20000.0, 80000.0, 50000.0, 40000.0, 24348.0, null, 170000.0, 80000.0, 30000.0, 50000.0, 50000.0, 20000.0, null, null, 90000.0, 240000.0, 60000.0, 30000.0, 30000.0, null, 240000.0, 50000.0, null, 60000.0, 20000.0, 20000.0, 20000.0, 68912.0, 410000.0, 20000.0, 120000.0, null, 13409.0, 30000.0, 1360000.0, null, 60000.0, 80000.0, 54377.0, 100000.0, 20000.0, 20000.0, 50000.0, 50000.0, 60000.0, 30000.0, 60000.0, 20000.0, 40000.0, 60000.0, 748150.0, 30000.0, 20000.0, 60000.0, 50000.0, 50000.0, 90000.0, 90000.0, 10000.0, 50000.0, 40000.0, 10000.0, 10000.0, 1019624.0, 20000.0, 20000.0, 30000.0, 100000.0, 20000.0, 120000.0, 57000.0, 20000.0, 150000.0, 450000.0, 20000.0, 450000.0, 10000.0, 10000.0, 30000.0, 45000.0, 20000.0, 120000.0, 570000.0, 12000.0, 60000.0, 20000.0, 9305.0, 60000.0, 40000.0, 40000.0, 30000.0, 160000.0, null, null, 1230000.0, null, 120000.0, 33075.0, null, 20000.0, 40000.0, 10000.0, 30000.0, 100000.0, 37500.0, 20000.0, 80000.0, 740000.0, 100000.0, 40000.0, 230000.0]}, {"marker": {"color": "rgba(50, 171, 96, 1.0)", "line": {"width": 1.3}, "opacity": 0.8, "size": 12, "symbol": "circle"}, "mode": "markers", "name": "2nd Quarter (Apr 1 - June 30)", "textfont": {"color": "#4D5663"}, "type": "scatter", "uid": "8b8eae7d-443c-4f5d-b2ad-bdb7ca231406", "x": [2015, 2009, 2011, 2014, 2012, 2012, 2017, 2010, 2008, 2015, 2017, 2017, 2017, 2013, 2017, 2014, 2015, 2016, 2012, 2016, 2015, 2008, 2015, 2010, 2010, 2011, 2017, 2014, 2017, 2010, 2008, 2011, 2011, 2015, 2017, 2008, 2010, 2014, 2009, 2011, 2011, 2015, 2016, 2010, 2014, 2012, 2014, 2014, 2014, 2009, 2012, 2016, 2008, 2012, 2013, 2014, 2008, 2009, 2008, 2009, 2008, 2015, 2013, 2010, 2014, 2008, 2008, 2012, 2014, 2010, 2013, 2017, 2017, 2010, 2011, 2008, 2013, 2015, 2008, 2011, 2017, 2017, 2009, 2013, 2010, 2008, 2009, 2015, 2014, 2015, 2008, 2014, 2011, 2016, 2015, 2017, 2013, 2009, 2012, 2014, 2013, 2017, 2010, 2011, 2011, 2015, 2011, 2010, 2016, 2008, 2009, 2011, 2017, 2009, 2010, 2015, 2008, 2013, 2008, 2008, 2011, 2014, 2014, 2012, 2011, 2011, 2017, 2014], "y": [70000.0, 60000.0, 20000.0, 7729.0, 50000.0, 20000.0, 27340.0, 510000.0, 245000.0, 50000.0, null, 50000.0, null, 40000.0, 2210000.0, 10000.0, 10000.0, 20000.0, 50000.0, 50000.0, 80000.0, 7890000.0, 270000.0, 260000.0, 90000.0, 61000.0, 30000.0, 50000.0, 90000.0, 80000.0, 20000.0, 130000.0, 24000.0, 40000.0, 20000.0, 110000.0, 70000.0, 30000.0, 60000.0, 21000.0, 80000.0, 60000.0, 150000.0, 40000.0, 20000.0, 1578100.0, 10000.0, 60000.0, 10000.0, 40000.0, 10000.0, 220000.0, 30000.0, 60000.0, 20000.0, 30000.0, 50000.0, 80000.0, 540000.0, 15000.0, 120000.0, 38809.0, 50000.0, 10000.0, 30000.0, 20000.0, 50000.0, 30000.0, 20000.0, 20000.0, 40000.0, 140000.0, 10000.0, null, 30000.0, 170000.0, 40000.0, 20000.0, 60000.0, 60000.0, 680000.0, 70000.0, 60000.0, 20000.0, 70000.0, 50000.0, null, 60000.0, 170000.0, 20000.0, null, 30000.0, 120200.0, 40000.0, 30000.0, null, 80000.0, 30000.0, 40000.0, null, 50000.0, 1260000.0, 50000.0, 4030000.0, 20000.0, 80000.0, 35000.0, 10000.0, 10000.0, null, 1750000.0, 50000.0, 20000.0, 30000.0, 1470000.0, 30000.0, 20000.0, 30000.0, 70000.0, 10000.0, 4338992.0, 15000.0, null, 20000.0, 207000.0, 20000.0, 240000.0, 40000.0]}, {"marker": {"color": "rgba(128, 0, 128, 1.0)", "line": {"width": 1.3}, "opacity": 0.8, "size": 12, "symbol": "circle"}, "mode": "markers", "name": "3rd Quarter (July 1 - Sep 30)", "textfont": {"color": "#4D5663"}, "type": "scatter", "uid": "86d477e0-3468-4219-babc-c8b215174caa", "x": [2009, 2011, 2016, 2017, 2010, 2010, 2017, 2012, 2008, 2009, 2013, 2012, 2010, 2011, 2010, 2015, 2009, 2011, 2017, 2009, 2010, 2013, 2010, 2014, 2016, 2008, 2010, 2008, 2010, 2008, 2012, 2015, 2009, 2011, 2016, 2012, 2015, 2008, 2012, 2012, 2012, 2011, 2015, 2013, 2012, 2008, 2010, 2017, 2015, 2016, 2008, 2009, 2012, 2009, 2009, 2011, 2009, 2012, 2015, 2009, 2014, 2017, 2012, 2010, 2011, 2009, 2009, 2013, 2010, 2013, 2013, 2011, 2010, 2009, 2008, 2011, 2011, 2008, 2012, 2014, 2010, 2011, 2010, 2012, 2008, 2017, 2009, 2008, 2009, 2015, 2010, 2011, 2017, 2009, 2013, 2015, 2009, 2013, 2010, 2008, 2010, 2008, 2010, 2013, 2010, 2008, 2010, 2008, 2017, 2009, 2013, 2012, 2015, 2017, 2008, 2017, 2014, 2016, 2008, 2010, 2009, 2009, 2015, 2017, 2010, 2010, 2009, 2013, 2009, 2016, 2008, 2015, 2009, 2008, 2011, 2013, 2012, 2010, 2015, 2017, 2009, 2016, 2010, 2013, 2017, 2014, 2012, 2009, 2011, 2017, 2016, 2011, 2008, 2010, 2014, 2008, 2014, 2008, 2014, 2012, 2009, 2008, 2008, 2016, 2010, 2009, 2016, 2017, 2008, 2009, 2015, 2010, 2017, 2017, 2008, 2010, 2016, 2009, 2009, 2013], "y": [80000.0, 10000.0, 30000.0, 20000.0, 70000.0, 10000.0, 10000.0, 30000.0, null, 10000.0, 20000.0, 1420000.0, 139998.0, 60000.0, null, 120000.0, 30000.0, 1800000.0, 130000.0, 100000.0, 20000.0, null, 70000.0, 50000.0, 80000.0, 30000.0, 30000.0, 220000.0, null, 70000.0, 10000.0, 200000.0, 34000.0, 20000.0, 50000.0, 487850.0, 20000.0, 50000.0, 40000.0, 50000.0, 70000.0, 300000.0, 11986.0, 20000.0, 20000.0, 10000.0, 260000.0, 60000.0, 50000.0, 160000.0, 1630000.0, 30000.0, 10000.0, 10000.0, 20000.0, 70000.0, 20000.0, 20000.0, 50000.0, 10000.0, 20000.0, 60000.0, 20000.0, 20000.0, 40000.0, 30000.0, null, 30000.0, 30000.0, 100000.0, null, 50000.0, 85108.0, 27000.0, null, 10000.0, 40000.0, 10000.0, null, 170000.0, 30000.0, null, 30000.0, 60000.0, 25000.0, 50000.0, 20000.0, 30000.0, 20000.0, 70000.0, null, 20000.0, 30000.0, 1420000.0, 40000.0, null, 75000.0, 40000.0, 40000.0, null, 230000.0, 60000.0, null, null, null, 10000.0, 20000.0, 100000.0, 30000.0, 136608.0, 280000.0, 10000.0, null, 120000.0, 10000.0, 30000.0, 20000.0, 10000.0, 20000.0, 80000.0, 10000.0, 120000.0, 50000.0, 20000.0, 10000.0, 80000.0, 30000.0, 60000.0, 60000.0, 20000.0, 3030000.0, null, null, 20000.0, 20000.0, 30000.0, 6000.0, 20000.0, 842000.0, 190000.0, 120000.0, 30000.0, 15000.0, 8500.0, 10000.0, 140000.0, 5000.0, 40000.0, 75000.0, 20000.0, 1760000.0, 40000.0, 30000.0, 20000.0, 80000.0, 30000.0, 40000.0, 80000.0, 20000.0, 10000.0, 20000.0, 50000.0, 20000.0, 15000.0, 10000.0, 60000.0, 20000.0, 30000.0, 1320000.0, 84615.0, 10000.0, 20000.0, 60000.0, 50000.0, 28626.0, 20000.0, 30000.0, 45000.0, 10000.0, 50000.0]}, {"marker": {"color": "rgba(219, 64, 82, 1.0)", "line": {"width": 1.3}, "opacity": 0.8, "size": 12, "symbol": "circle"}, "mode": "markers", "name": "Year-End (July 1 - Dec 31)", "textfont": {"color": "#4D5663"}, "type": "scatter", "uid": "9016e077-7a68-4916-98d7-f1fbe1712f0c", "x": [2006, 2006, 2006, 2004, 2005, 2007, 2005, 2007, 2006, 2006, 2007, 2007, 2006, 2003, 2005, 2007, 2007, 2007, 2005, 2006, 2007, 2006, 2005, 2007, 2007, 2007, 2006, 2007, 2007, 2007, 2006, 2007, 2003, 2006, 2007, 2007, 2007], "y": [43000.0, 10000.0, 60000.0, 20000.0, 20000.0, 194546.0, 20000.0, 40000.0, 40000.0, null, 20000.0, 60000.0, 40000.0, 40000.0, 60000.0, 20000.0, 360000.0, 12000.0, 740000.0, 90000.0, 80000.0, 52602.0, 20000.0, 1100000.0, 20000.0, 150000.0, 20000.0, 40000.0, 40000.0, 60000.0, null, 20000.0, 20000.0, 20000.0, 20000.0, 20000.0, 120000.0]}, {"marker": {"color": "rgba(0, 128, 128, 1.0)", "line": {"width": 1.3}, "opacity": 0.8, "size": 12, "symbol": "circle"}, "mode": "markers", "name": "Mid-Year (Jan 1 - Jun 30)", "textfont": {"color": "#4D5663"}, "type": "scatter", "uid": "f3243928-f766-4690-8fef-f6f81004a7ca", "x": [2005, 2007, 2007, 2004, 2005, 2007, 2007, 2007, 2007, 2007, 2003, 2007, 2007, 2007, 2002, 2006, 2004, 2007, 2007, 2002, 2007, 2007, 2007, 2007], "y": [117617.0, 140000.0, 240000.0, 20000.0, null, null, 20000.0, 160000.0, 20000.0, 40000.0, 40000.0, 140000.0, 40000.0, 60000.0, null, 40000.0, 20000.0, 60000.0, 220000.0, 20000.0, 60000.0, 280000.0, 20000.0, 340000.0]}, {"marker": {"color": "rgba(255, 255, 51, 1.0)", "line": {"width": 1.3}, "opacity": 0.8, "size": 12, "symbol": "circle"}, "mode": "markers", "name": "UNDETERMINED", "textfont": {"color": "#4D5663"}, "type": "scatter", "uid": "0452eea5-5d69-4756-a8a5-f5af8eeb5fb5", "x": [2013, 2012, 2018, 2009, 2010, 2009, 2017, 2008, 2008, 2011], "y": [null, null, null, null, null, null, null, null, null, null]}],
                         {"legend": {"bgcolor": "#F5F6F9", "font": {"color": "#4D5663"}}, "paper_bgcolor": "#F5F6F9", "plot_bgcolor": "#F5F6F9", "title": {"font": {"color": "#4D5663"}, "text": "Amount Given Compared to year"}, "xaxis": {"gridcolor": "#E1E5ED", "showgrid": true, "tickfont": {"color": "#4D5663"}, "title": {"font": {"color": "#4D5663"}, "text": "Year"}, "zerolinecolor": "#E1E5ED"}, "yaxis": {"gridcolor": "#E1E5ED", "showgrid": true, "tickfont": {"color": "#4D5663"}, "title": {"font": {"color": "#4D5663"}, "text": "Amount Given"}, "zerolinecolor": "#E1E5ED"}},
                         {"showLink": true, "linkText": "Export to plot.ly", "plotlyServerURL": "https://plot.ly", "responsive": true}
                     ).then(function(){
                             
-var gd = document.getElementById('1b458779-ff1c-40bd-bb9e-8c6f5556870f');
+var gd = document.getElementById('cb5b30cc-2810-4b72-80ae-77c2d7592ee0');
 var x = new MutationObserver(function (mutations, observer) {{
         var display = window.getComputedStyle(gd).display;
         if (!display || display === 'none') {{
@@ -13601,13 +14279,13 @@ if (outputEl) {{
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[52]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="n">go</span><span class="o">.</span><span class="n">Bar</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">dfviz</span><span class="o">.</span><span class="n">year</span><span class="p">,</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data1</span> <span class="o">=</span> <span class="p">[</span><span class="n">go</span><span class="o">.</span><span class="n">Bar</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">dfviz</span><span class="o">.</span><span class="n">year</span><span class="p">,</span>
             <span class="n">y</span><span class="o">=</span><span class="n">dfviz</span><span class="o">.</span><span class="n">amount</span><span class="p">)]</span>
 
-<span class="n">py</span><span class="o">.</span><span class="n">iplot</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;lobby barchart&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">400</span><span class="p">)</span>
+<span class="n">py</span><span class="o">.</span><span class="n">iplot</span><span class="p">(</span><span class="n">data1</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;lobbydata1&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">400</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13620,12 +14298,12 @@ if (outputEl) {{
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[52]:</div>
+    <div class="prompt output_prompt">Out[39]:</div>
 
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
-<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~hopetambala/21.embed" height="525px" width="100%"></iframe>
+<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~hopetambala/23.embed" height="525px" width="100%"></iframe>
 </div>
 
 </div>
@@ -13636,7 +14314,7 @@ if (outputEl) {{
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[54]:</div>
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">dfviz</span><span class="p">[</span><span class="s1">&#39;registrant_freq&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dfviz</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;registrant&#39;</span><span class="p">)[</span><span class="s1">&#39;registrant&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="s1">&#39;count&#39;</span><span class="p">)</span>
@@ -13657,7 +14335,7 @@ if (outputEl) {{
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[54]:</div>
+    <div class="prompt output_prompt">Out[40]:</div>
 
 
 
@@ -13742,17 +14420,17 @@ if (outputEl) {{
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[53]:</div>
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data2</span> <span class="o">=</span> <span class="p">[</span><span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span>
     <span class="n">y</span><span class="o">=</span><span class="n">df_reg_amounts</span><span class="o">.</span><span class="n">amount_sum</span><span class="p">,</span>
     <span class="n">x</span><span class="o">=</span><span class="n">df_reg_amounts</span><span class="o">.</span><span class="n">year</span><span class="p">,</span> 
     <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;markers&#39;</span><span class="p">,</span>
     <span class="n">marker_color</span><span class="o">=</span><span class="n">df_reg_amounts</span><span class="p">[</span><span class="s1">&#39;registrant_freq&#39;</span><span class="p">],</span>
     <span class="n">text</span><span class="o">=</span><span class="n">df_reg_amounts</span><span class="p">[</span><span class="s1">&#39;registrant&#39;</span><span class="p">])]</span> <span class="c1"># hover text goes here</span>
 
-<span class="n">py</span><span class="o">.</span><span class="n">iplot</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;lobby barchart&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">400</span><span class="p">)</span>
+<span class="n">py</span><span class="o">.</span><span class="n">iplot</span><span class="p">(</span><span class="n">data2</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;lobbydata2&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">400</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13765,12 +14443,12 @@ if (outputEl) {{
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[53]:</div>
+    <div class="prompt output_prompt">Out[41]:</div>
 
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
-<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~hopetambala/21.embed" height="525px" width="100%"></iframe>
+<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~hopetambala/25.embed" height="525px" width="100%"></iframe>
 </div>
 
 </div>
@@ -13788,7 +14466,7 @@ if (outputEl) {{
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[55]:</div>
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_sum_amounts</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;amount_sum&#39;</span> <span class="p">:</span> <span class="n">dfviz</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span> <span class="p">[</span> <span class="s2">&quot;registrant&quot;</span><span class="p">]</span> <span class="p">)[</span><span class="s1">&#39;amount&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()})</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
@@ -13806,7 +14484,7 @@ if (outputEl) {{
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[55]:</div>
+    <div class="prompt output_prompt">Out[42]:</div>
 
 
 
@@ -13872,13 +14550,13 @@ if (outputEl) {{
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[56]:</div>
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="n">go</span><span class="o">.</span><span class="n">Bar</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">df_sum_amounts</span><span class="o">.</span><span class="n">registrant</span><span class="p">,</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data3</span> <span class="o">=</span> <span class="p">[</span><span class="n">go</span><span class="o">.</span><span class="n">Bar</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">df_sum_amounts</span><span class="o">.</span><span class="n">registrant</span><span class="p">,</span>
             <span class="n">x</span><span class="o">=</span><span class="n">df_sum_amounts</span><span class="o">.</span><span class="n">amount_sum</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="s1">&#39;h&#39;</span><span class="p">)]</span>
 
-<span class="n">py</span><span class="o">.</span><span class="n">iplot</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;lobby barchart&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">400</span><span class="p">)</span>
+<span class="n">py</span><span class="o">.</span><span class="n">iplot</span><span class="p">(</span><span class="n">data3</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;lobbydata3&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">400</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13891,12 +14569,12 @@ if (outputEl) {{
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[56]:</div>
+    <div class="prompt output_prompt">Out[43]:</div>
 
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
-<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~hopetambala/21.embed" height="525px" width="100%"></iframe>
+<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~hopetambala/27.embed" height="525px" width="100%"></iframe>
 </div>
 
 </div>
@@ -13914,14 +14592,14 @@ if (outputEl) {{
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[57]:</div>
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_sum_amounts_lessthan500</span> <span class="o">=</span> <span class="n">df_sum_amounts</span><span class="p">[</span><span class="o">~</span><span class="p">(</span><span class="n">df_sum_amounts</span><span class="p">[</span><span class="s1">&#39;amount_sum&#39;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">500000</span><span class="p">)]</span> 
-<span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="n">go</span><span class="o">.</span><span class="n">Bar</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">df_sum_amounts_lessthan500</span><span class="o">.</span><span class="n">registrant</span><span class="p">,</span>
+<span class="n">data4</span> <span class="o">=</span> <span class="p">[</span><span class="n">go</span><span class="o">.</span><span class="n">Bar</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">df_sum_amounts_lessthan500</span><span class="o">.</span><span class="n">registrant</span><span class="p">,</span>
             <span class="n">x</span><span class="o">=</span><span class="n">df_sum_amounts_lessthan500</span><span class="o">.</span><span class="n">amount_sum</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="s1">&#39;h&#39;</span><span class="p">)]</span>
 
-<span class="n">py</span><span class="o">.</span><span class="n">iplot</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;lobby barchart&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">400</span><span class="p">)</span>
+<span class="n">py</span><span class="o">.</span><span class="n">iplot</span><span class="p">(</span><span class="n">data4</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;lobbydata4&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">400</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13934,12 +14612,12 @@ if (outputEl) {{
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[57]:</div>
+    <div class="prompt output_prompt">Out[44]:</div>
 
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
-<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~hopetambala/21.embed" height="525px" width="100%"></iframe>
+<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~hopetambala/29.embed" height="525px" width="100%"></iframe>
 </div>
 
 </div>
